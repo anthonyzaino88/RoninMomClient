@@ -56,19 +56,7 @@ body {
         flex-direction: column;
     }
 
-    .mission {
-        text-align: center;
-    }
-    .mission h2, .mission p {
-        text-align: center;
-    }
-}
-
-
-/* For smaller devices, center the text */
-@media (max-width: 400px) {
-
-    .mobileheader {
+  .mobileheader {
     display: block;
 
 }
