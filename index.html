@@ -42,5 +42,38 @@
         </section>
     </div>
 <footer-component></footer-component>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null, // viewport
+    threshold: 0.1, // trigger when 10% of the target is visible
+    rootMargin: "0px"
+  };
+
+  const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); // Stop observing the target
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Select elements to observe
+  const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+
+  // Observe each element
+  elementsToAnimate.forEach((el) => {
+    observer.observe(el);
+  });
+});
+
+
+</script>
+
 </body>
 </html>
