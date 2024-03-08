@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'High Tower Text', serif; /* Assuming High Tower Text is the font you'd like to use globally */
+    background-color: whitesmoke; /* Sets a light gray background color for all pages */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Ensures all elements inherit the box-sizing from body */
+}
