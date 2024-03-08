@@ -58,24 +58,25 @@ body {
 
   .mobileheader {
     display: block;
+    padding: 2rem;
 
 }
 
 .mobile-title {
-    font-size: 35px;
+    font-size: 100px;
     color: #302A25;
 }
 
 .mobile-sub-title {
-    font-size: 25px;
-    color: #302A25;
-}
+    font-size: 25px!important;
+    color: #302A25!important;
+    margin-bottom: 4rem!important;
 
 
 
 .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around!important;
     width: 100%;
     max-width: 600px; /* Adjust based on your preference */
     margin-top: 20px;
@@ -85,7 +86,7 @@ header img {
     width: auto;
     max-width: 80%;
     margin: 0 auto;
-    display: none;
+    display: none!important;
 }
 
 
