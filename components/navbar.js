@@ -31,14 +31,16 @@ class RoninNavbar extends HTMLElement {
                 color: #302A25; /* Text color change on scroll */
             }
 
-            .logo img {
+            .logo {
                 height: 50px; 
+                color: white;
+                font-size: 2rem;
        
             }
 
         </style>
         <nav>
-            <div class="logo"><a href="/"><img src="../assets/img/logo-white.png" alt="Ronin Mom Logo"></a></div>
+            <div class="logo"><a href="/">RM</a></div>
             <div class="links">
                 <a href="./pages/about.html">About</a>
                 <a href="./pages/blog.html">Blog</a>
