@@ -1,0 +1,83 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Tech",
+        "blogs": [
+          {
+            "id": 1,
+            "title": "The Future of AI",
+            "dateWritten": "2024-05-25",
+            "author": "John Doe",
+            "link": "https://example.com/blog/future-of-ai",
+            "content": "AI is transforming industries by automating tasks and providing insights through data analysis...",
+            "keywords": ["AI", "Machine Learning", "Future"],
+            "image": "https://example.com/images/future-of-ai.jpg"
+          },
+          {
+            "id": 2,
+            "title": "Web Development Trends 2024",
+            "dateWritten": "2024-04-15",
+            "author": "Jane Smith",
+            "link": "https://example.com/blog/web-development-trends-2024",
+            "content": "As the web continues to evolve, new trends are emerging that web developers need to be aware of...",
+            "keywords": ["Web Development", "Trends", "2024"],
+            "image": "https://example.com/images/web-development-trends-2024.jpg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Health",
+        "blogs": [
+          {
+            "id": 3,
+            "title": "The Benefits of a Healthy Diet",
+            "dateWritten": "2024-03-10",
+            "author": "Alice Brown",
+            "link": "https://example.com/blog/benefits-of-healthy-diet",
+            "content": "A healthy diet can improve your overall well-being and reduce the risk of chronic diseases...",
+            "keywords": ["Health", "Diet", "Well-being"],
+            "image": "https://example.com/images/healthy-diet.jpg"
+          },
+          {
+            "id": 4,
+            "title": "Mental Health Awareness",
+            "dateWritten": "2024-02-20",
+            "author": "Bob White",
+            "link": "https://example.com/blog/mental-health-awareness",
+            "content": "Raising awareness about mental health is crucial for early intervention and treatment...",
+            "keywords": ["Mental Health", "Awareness", "Treatment"],
+            "image": "https://example.com/images/mental-health-awareness.jpg"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Travel",
+        "blogs": [
+          {
+            "id": 5,
+            "title": "Top Destinations for 2024",
+            "dateWritten": "2024-01-15",
+            "author": "Chris Green",
+            "link": "https://example.com/blog/top-destinations-2024",
+            "content": "Explore the top travel destinations for 2024, from tropical beaches to bustling cities...",
+            "keywords": ["Travel", "Destinations", "2024"],
+            "image": "https://example.com/images/top-destinations-2024.jpg"
+          },
+          {
+            "id": 6,
+            "title": "Travel Tips for a Smooth Journey",
+            "dateWritten": "2023-12-05",
+            "author": "Diana Blue",
+            "link": "https://example.com/blog/travel-tips",
+            "content": "Planning your trip can make all the difference for a smooth and enjoyable journey...",
+            "keywords": ["Travel", "Tips", "Journey"],
+            "image": "https://example.com/images/travel-tips.jpg"
+          }
+        ]
+      }
+    ]
+  }
+  
