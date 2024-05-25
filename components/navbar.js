@@ -32,7 +32,6 @@ class RoninNavbar extends HTMLElement {
             }
 
             .logo {
-                height: 50px; 
                 color: white;
                 font-size: 2rem;
        
