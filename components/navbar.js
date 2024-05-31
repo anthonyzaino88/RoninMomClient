@@ -18,7 +18,7 @@ class RoninNavbar extends HTMLElement {
                 align-items: center;
                 background-color: #302A25; /* Default color */
                 z-index: 1000; /* Ensure navbar is always on top */
-                height: 150px;
+                height: 100px;
             }
 
             a {
@@ -35,7 +35,7 @@ class RoninNavbar extends HTMLElement {
 
             .logo {
                 color: white;
-                font-size: 2rem;
+                font-size: 3rem;
        
             }
 
