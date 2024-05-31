@@ -41,9 +41,9 @@ class FooterComponent extends HTMLElement {
         <div class="footer">
           <div class="social-links">
             <!-- Adjust the paths to your icons as needed -->
-            <a href="https://facebook.com" target="_blank"><img src="./assets/img/facebook.svg" alt="Facebook"></a>
-            <a href="https://instagram.com" target="_blank"><img src="./assets/img/instagram.svg" alt="Instagram"></a>
-            <a href="https://tiktok.com" target="_blank"><img src="./assets/img/tiktok.svg" alt="TikTok"></a>
+            <a href="https://facebook.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/facebook.svg" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/instagram.svg" alt="Instagram"></a>
+            <a href="https://tiktok.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/tiktok.svg" alt="TikTok"></a>
           </div>
           <div class="copyright">
             &copy; 2024 Ronin Mom. All rights reserved.
