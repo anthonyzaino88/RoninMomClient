@@ -10,11 +10,14 @@ class FooterComponent extends HTMLElement {
       this.shadowRoot.innerHTML = `
         <style>
           .footer {
-            background-color: #F4F1EA; /* Cream color like in the header */
+            background-color: #F4F1EA;
             padding: 20px 10px;
             text-align: center;
-            color: #302A25; /* Text color */
-            font-family: 'Hightower Text', serif; /* Consistent font */
+            color: #302A25;
+            font-family: 'Hightower Text', serif;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
           }
   
           .social-links {
