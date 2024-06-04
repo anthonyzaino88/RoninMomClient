@@ -1,31 +1,45 @@
 {
     "categories": [
       {
-        "id": 1,
-        "name": "Home",
         "blogs": [
           {
             "id": 1,
             "title": "The Surprising Benefits of Replacing Paper Towels with Reusable Cotton Rags",
-            "dateWritten": "2024-06-05",
-            "author": "Joanna Zaino",
+            "dateWritten": "2024-05-25",
+            "author": "Jane Doe",
             "link": "blog.html?id=1",
-            "content": "As a mom, I always strive to make the best choices for my family, especially when it comes to our household habits. For years, we grossly overused paper towels. They were convenient, sure, but deep down, I knew our reliance on them wasn’t the best for the environment or our budget. I often found myself wondering about the waste we were unconsciously contributing to every time we grabbed yet another paper towel.",
-            "keywords": ["Organic", "Organic Cotton", "Saving Money"],
-            "image": "https://anthonyzaino88.github.io/RoninMomClient/assets/img/towel.jpeg"
-          },
-          {
-            "id": 2,
-            "title": "Web Development Trends 2024",
-            "dateWritten": "2024-04-15",
-            "author": "Jane Smith",
-            "link": "https://example.com/blog/web-development-trends-2024",
-            "content": "As the web continues to evolve, new trends are emerging that web developers need to be aware of...",
-            "keywords": ["Web Development", "Trends", "2024"],
-            "image": "https://example.com/images/web-development-trends-2024.jpg"
+            "content": [
+              {
+                "contentTitle": "The Turning Point",
+                "contentBody": "One day, out of sheer curiosity and a bit of concern about how paper towels are made, I decided to look into alternatives. What I discovered was eye-opening. Paper towels, though seemingly harmless, have a significant environmental footprint. The chemicals and processes involved in their production are far from eco-friendly. Not to mention the waste – they are single-use and end up piling in landfills."
+              },
+              {
+                "contentTitle": "Making the Switch",
+                "contentBody": "Skeptical but hopeful, I decided to give reusable 100% organic cotton rags a try. At first, I worried about the practicality. Would they be as absorbent? Would they require too much maintenance? But within just a few days, our family realized how easy the transition was. The cotton rags were just as effective, if not more so, than paper towels. They were soft, durable, and easy to wash."
+              },
+              {
+                "contentTitle": "The Benefits We Discovered",
+                "contentBody": "Eco-Friendly: By switching to reusable cotton rags, we significantly reduced our household waste. Knowing we were doing our part to lessen our environmental impact felt incredibly rewarding.\n\nCost-Effective: Initially, buying a set of high-quality cotton rags seemed like a bigger expense, but over time, we saved money. No more frequent runs to the store for paper towels!\n\nBetter for Our Health: Organic cotton is free from the harmful chemicals found in many paper towels. It felt safer and more natural to use these on surfaces, especially where our kids eat and play.\n\nDurability: These rags can withstand countless washes and still maintain their integrity. Unlike paper towels, they don’t tear or wear out quickly."
+              },
+              {
+                "contentTitle": "A Fun Realization",
+                "contentBody": "After a while, it dawned on us that buying paper towels might just be a bit of a conspiracy scam (lightly joking, of course!). We were so conditioned to believe that they were the only option that we never even considered alternatives. The marketing giants had us hooked, but we’ve broken free!"
+              },
+              {
+                "contentTitle": "Seamlessly Integrating Cotton Rags",
+                "contentBody": "For those looking to make the switch, we’ve found some amazing options that worked best for us. Here are our top picks:\n\n- Organic Cotton Rags - Brand A: These rags are incredibly absorbent and come in a variety of colors.\n- Durable Cotton Cloths - Brand B: Perfect for heavy-duty cleaning without any wear and tear.\n- Eco-Friendly Cleaning Rags - Brand C: Made from sustainably sourced cotton, these are a great addition to any eco-conscious household."
+              },
+              {
+                "contentTitle": "",
+                "contentBody": "Making small changes can have a big impact. By swapping out paper towels for reusable cotton rags, we’ve made our home more sustainable and saved money in the long run. It’s a simple switch that I encourage every family to try. You might just find, like we did, that it’s easier than you think!"
+              }
+            ],
+            "keywords": ["Eco-Friendly", "Reusable", "Cotton Rags", "Sustainability"],
+            "image": "https://example.com/images/reusable-cotton-rags.jpg"
           }
         ]
-      },
+      }
+      ,
       {
         "id": 2,
         "name": "Health",

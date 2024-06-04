@@ -1,16 +1,16 @@
 class BlogComponent extends HTMLElement {
-    constructor() {
-      super();
-      this.attachShadow({ mode: 'open' });
-    }
-  
-    connectedCallback() {
-      this.render();
-      this.fetchBlogData();
-    }
-  
-    async fetchBlogData() {
-      try {
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+  }
+
+  connectedCallback() {
+    this.render();
+    this.fetchBlogData();
+  }
+
+  async fetchBlogData() {
+    try {
         const response = await fetch('https://anthonyzaino88.github.io/RoninMomClient/data/blog.json');
         const data = await response.json();
         this.renderBlogs(data);
@@ -57,6 +57,9 @@ class BlogComponent extends HTMLElement {
           }
           .blog-content {
             margin-top: 10px;
+            height: 60px; /* Fixed height to show a snippet */
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
           .read-more {
             display: inline-block;
@@ -76,21 +79,28 @@ class BlogComponent extends HTMLElement {
   
     renderBlogs(data) {
       const blogsContainer = this.shadowRoot.querySelector('.blogs');
-      data.categories.forEach(category => {
-        category.blogs.forEach(blog => {
-          const blogElement = document.createElement('div');
-          blogElement.classList.add('blog');
-          blogElement.innerHTML = `
-            <img src="${blog.image}" alt="${blog.title}">
-            <div class="blog-title">${blog.title}</div>
-            <div class="blog-date">Date: ${blog.dateWritten}</div>
-            <div class="blog-author">Author: ${blog.author}</div>
-            <div class="blog-content">${blog.content}</div>
-            <a class="read-more" href="${blog.link}">Read more</a>
-          `;
-          blogsContainer.appendChild(blogElement);
-        });
+      data.blogs.forEach(blog => {
+        const blogElement = document.createElement('div');
+        blogElement.classList.add('blog');
+        blogElement.innerHTML = `
+          <img src="${blog.image}" alt="${blog.title}">
+          <div class="blog-title">${blog.title}</div>
+          <div class="blog-date">Date: ${blog.dateWritten}</div>
+          <div class="blog-author">Author: ${blog.author}</div>
+          <div class="blog-content">${blog.content.map(section => section.contentBody).join(' ').substring(0, 100)}...</div>
+          <a class="read-more" href="javascript:void(0);" data-id="${blog.id}">Read more</a>
+        `;
+        blogElement.querySelector('.read-more').addEventListener('click', () => this.showSingleBlog(blog.id));
+        blogsContainer.appendChild(blogElement);
       });
+    }
+  
+    showSingleBlog(id) {
+      const singleBlogComponent = document.querySelector('single-blog-component');
+      const blogComponent = this.shadowRoot.querySelector('.blog-container');
+      blogComponent.style.display = 'none';
+      singleBlogComponent.style.display = 'block';
+      singleBlogComponent.setBlogId(id);
     }
   }
   

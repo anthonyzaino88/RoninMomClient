@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ronin Mom | Blog</title>
-    <link rel="stylesheet" href="../globleStyles.css">
- <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ronin Mom | Blog</title>
+  <link rel="stylesheet" href="../globalStyles.css">
+  <style>
     .container {
-        margin-top: 3rem;
-        
+      margin-top: 3rem;
     }
- </style>  
+    single-blog-component {
+      display: none;
+    }
+  </style>
 </head>
 <body>
- <ronin-navbar></ronin-navbar>  
- <div class="container">
- <h1>Ronin Mom | Blog</h1> 
- <blog-component></blog-component>
- <single-blog-component></single-blog-components>
- </div>
- <footer-component></footer-component>
+  <ronin-navbar></ronin-navbar>
+  <div class="container">
+    <h1>Ronin Mom | Blog</h1>
+    <blog-component></blog-component>
+    <single-blog-component></single-blog-component>
+  </div>
+  <footer-component></footer-component>
 
-<script src="../components/navbar.js"></script>
-<script src="../components/blog.js"></script>
-<script src="../components/singleBlog.js"></script>
-<script src="../components/footer.js"></script>
+  <script src="../components/navbar.js"></script>
+  <script src="../components/blog.js"></script>
+  <script src="../components/singleBlog.js"></script>
+  <script src="../components/footer.js"></script>
 </body>
 </html>

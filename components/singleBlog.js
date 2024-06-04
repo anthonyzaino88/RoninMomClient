@@ -6,17 +6,18 @@ class SingleBlogComponent extends HTMLElement {
   
     connectedCallback() {
       this.render();
+    }
+  
+    setBlogId(id) {
+      this.blogId = id;
       this.fetchBlogData();
     }
   
     async fetchBlogData() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const blogId = urlParams.get('id');
-  
       try {
-        const response = await fetch('./blogData.json');
+        const response = await fetch('https://anthonyzaino88.github.io/RoninMomClient/data/blog.json');
         const data = await response.json();
-        const blog = this.findBlogById(data, blogId);
+        const blog = data.blogs.find(blog => blog.id == this.blogId);
         if (blog) {
           this.renderBlog(blog);
         } else {
@@ -26,17 +27,6 @@ class SingleBlogComponent extends HTMLElement {
         console.error('Failed to fetch blog data:', error);
         this.shadowRoot.innerHTML = `<p>Error loading blog.</p>`;
       }
-    }
-  
-    findBlogById(data, id) {
-      for (const category of data.categories) {
-        for (const blog of category.blogs) {
-          if (blog.id == id) {
-            return blog;
-          }
-        }
-      }
-      return null;
     }
   
     render() {
@@ -58,9 +48,21 @@ class SingleBlogComponent extends HTMLElement {
           .blog-content {
             margin-top: 20px;
           }
+          .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
         </style>
         <div class="blog"></div>
+        <div class="back-button">Back to Blog List</div>
       `;
+      this.shadowRoot.querySelector('.back-button').addEventListener('click', () => this.backToBlogList());
     }
   
     renderBlog(blog) {
@@ -69,10 +71,18 @@ class SingleBlogComponent extends HTMLElement {
         <div class="blog-title">${blog.title}</div>
         <div class="blog-date">Date: ${blog.dateWritten}</div>
         <div class="blog-author">Author: ${blog.author}</div>
-        <div class="blog-content">${blog.content}</div>
+        <div class="blog-content">${blog.content.map(section => `
+          <h3>${section.contentTitle}</h3>
+          <p>${section.contentBody}</p>
+        `).join('')}</div>
       `;
+    }
+  
+    backToBlogList() {
+      const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
+      blogComponent.style.display = 'flex';
+      this.style.display = 'none';
     }
   }
   
   customElements.define('single-blog-component', SingleBlogComponent);
-  
