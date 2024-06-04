@@ -83,12 +83,16 @@ class BlogComponent extends HTMLElement {
       category.blogs.forEach(blog => {
         const blogElement = document.createElement('div');
         blogElement.classList.add('blog');
+        const contentSnippet = blog.content && blog.content.length > 0
+          ? blog.content[0].contentBody.substring(0, 100) + '...'
+          : 'No content available';
+
         blogElement.innerHTML = `
           <img src="${blog.image}" alt="${blog.title}">
           <div class="blog-title">${blog.title}</div>
           <div class="blog-date">Date: ${blog.dateWritten}</div>
           <div class="blog-author">Author: ${blog.author}</div>
-          <div class="blog-content">${blog.content[0].contentBody.substring(0, 100)}...</div>
+          <div class="blog-content">${contentSnippet}</div>
           <a class="read-more" href="javascript:void(0);" data-id="${blog.id}">Read more</a>
         `;
         blogElement.querySelector('.read-more').addEventListener('click', () => this.showSingleBlog(blog.id));
