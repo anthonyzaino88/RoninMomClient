@@ -17,7 +17,7 @@ class SingleBlogComponent extends HTMLElement {
       try {
         const response = await fetch('https://anthonyzaino88.github.io/RoninMomClient/data/blog.json');
         const data = await response.json();
-        const blog = data.blogs.find(blog => blog.id == this.blogId);
+        const blog = data.categories.flatMap(category => category.blogs).find(blog => blog.id == this.blogId);
         if (blog) {
           this.renderBlog(blog);
         } else {
@@ -86,3 +86,4 @@ class SingleBlogComponent extends HTMLElement {
   }
   
   customElements.define('single-blog-component', SingleBlogComponent);
+  
