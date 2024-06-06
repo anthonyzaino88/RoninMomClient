@@ -4,9 +4,9 @@
         "blogs": [
           {
             "id": 1,
-            "title": "The Surprising Benefits of Replacing Paper Towels with Reusable Cotton Rags",
+            "title": "The Surprising Benefits of Replacing Paper Towels with Reusable Organic Cotton Dish Cloths",
             "dateWritten": "2024-05-25",
-            "author": "Jane Doe",
+            "author": "Joanna Zaino",
             "link": "blog.html?id=1",
             "content": [
               {
@@ -35,7 +35,7 @@
               }
             ],
             "keywords": ["Eco-Friendly", "Reusable", "Cotton Rags", "Sustainability"],
-            "image": "https://example.com/images/reusable-cotton-rags.jpg"
+            "image": "../assets/img/towel.jpeg"
           }
         ]
       }
