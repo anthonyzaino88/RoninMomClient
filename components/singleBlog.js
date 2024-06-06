@@ -52,8 +52,8 @@ class SingleBlogComponent extends HTMLElement {
           display: inline-block;
           margin-top: 20px;
           padding: 10px 20px;
-          background-color: #007BFF;
-          color: #fff;
+          background-color: #F4F1EA;
+          color: #302A25;
           text-decoration: none;
           border-radius: 5px;
           cursor: pointer;
