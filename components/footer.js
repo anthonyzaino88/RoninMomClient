@@ -16,22 +16,36 @@ class FooterComponent extends HTMLElement {
       rootMargin: '0px'
     };
 
-    const observerCallback = (entries, observer) => {
+    const observerCallback = (entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          this.shadowRoot.querySelector('.footer').classList.add('visible');
-        } else {
-          this.shadowRoot.querySelector('.footer').classList.remove('visible');
+        if (entry.target.classList.contains('cta')) {
+          if (entry.isIntersecting) {
+            this.hideFooter();
+          } else {
+            this.showFooter();
+          }
+        } else if (entry.target.classList.contains('mission')) {
+          if (entry.isIntersecting) {
+            this.hideFooter();
+          }
         }
       });
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const targets = document.querySelectorAll('.wrapper, .cta');
+    const missionSection = document.querySelector('.mission');
+    const ctaSection = document.querySelector('.cta');
 
-    targets.forEach(target => {
-      observer.observe(target);
-    });
+    if (missionSection) observer.observe(missionSection);
+    if (ctaSection) observer.observe(ctaSection);
+  }
+
+  hideFooter() {
+    this.shadowRoot.querySelector('.footer').classList.remove('visible');
+  }
+
+  showFooter() {
+    this.shadowRoot.querySelector('.footer').classList.add('visible');
   }
 
   render() {
