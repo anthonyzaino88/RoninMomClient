@@ -16,7 +16,7 @@ class FooterComponent extends HTMLElement {
       rootMargin: '0px'
     };
 
-    const observerCallback = (entries) => {
+    const observerCallback = (entries, observer) => {
       entries.forEach(entry => {
         if (entry.target.classList.contains('cta')) {
           if (entry.isIntersecting) {
@@ -76,7 +76,7 @@ class FooterComponent extends HTMLElement {
 
         .social-links a {
           margin: 0 5px;
-          color: #302A25;
+          color: #302A25; /* Icon color */
           text-decoration: none;
         }
 
