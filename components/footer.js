@@ -27,6 +27,8 @@ class FooterComponent extends HTMLElement {
         } else if (entry.target.classList.contains('mission')) {
           if (entry.isIntersecting) {
             this.hideFooter();
+          } else if (!document.querySelector('.cta').isIntersecting) {
+            this.showFooter();
           }
         }
       });
