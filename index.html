@@ -9,8 +9,122 @@
     <link rel="stylesheet" href="./assets/styles/home.css">
     <link rel="stylesheet" href="./globleStyles.css">
     <script src="./components/footer.js"></script>
- 
- 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            font-family: "hightower-text", serif;
+            font-style: normal;
+            background-color: #F4F1EA;
+            scroll-snap-type: y mandatory;
+        }
+
+        section {
+            scroll-snap-align: start;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F4F1EA;
+        }
+
+        header img {
+            width: auto;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .mobileheader {
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .mobile-title, .mobile-sub-title {
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .mobile-title {
+            transform: translateX(-100%);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .mobile-sub-title {
+            transform: translateX(100%);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mission, .cta {
+            padding: 40px 20px;
+            text-align: center;
+            height: 100vh;
+            flex: 1;
+        }
+
+        .mission {
+            background-color: #D9CAB3;
+            background: linear-gradient(to bottom, #D9CAB3, rgba(48, 42, 37, 0));
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateX(-100%);
+        }
+
+        .cta {
+            background-color: #302A25;
+            color: whitesmoke;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateX(100%);
+        }
+
+        .cta button {
+            background-color: #9E4624;
+            border: 2px solid #302A25;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: border-color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
+            color: #F4F1EA;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .cta button:hover {
+            background-color: #9E4624;
+            border-color: #F4F1EA;
+            color: #F4F1EA;
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
 
@@ -39,39 +153,33 @@
             <button>SIGN UP</button>
         </section>
     </div>
-<footer-component></footer-component>
+    <footer-component class="fade-in"></footer-component>
 
-<script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px"
+            };
 
-document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    root: null, // viewport
-    threshold: 0.1, // trigger when 10% of the target is visible
-    rootMargin: "0px"
-  };
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
 
-  const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Stop observing the target
-      }
-    });
-  };
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
+            const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
 
-  // Select elements to observe
-  const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-
-  // Observe each element
-  elementsToAnimate.forEach((el) => {
-    observer.observe(el);
-  });
-});
-
-
-</script>
-
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
