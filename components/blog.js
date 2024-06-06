@@ -83,12 +83,17 @@ class BlogComponent extends HTMLElement {
       category.blogs.forEach(blog => {
         const blogElement = document.createElement('div');
         blogElement.classList.add('blog');
-        const contentSnippet = blog.content && blog.content.length > 0
-          ? blog.content[0].contentBody.substring(0, 100) + '...'
-          : 'No content available';
+        let contentSnippet = 'No content available';
+        
+        if (blog.content && blog.content.length > 0) {
+          const firstContentSection = blog.content[0];
+          if (firstContentSection.contentBody) {
+            contentSnippet = firstContentSection.contentBody.substring(0, 100) + '...';
+          }
+        }
 
         blogElement.innerHTML = `
-          <img src="${blog.image}" alt="${blog.title}">
+          <img src="${blog.image || 'default-image.jpg'}" alt="${blog.title}">
           <div class="blog-title">${blog.title}</div>
           <div class="blog-date">Date: ${blog.dateWritten}</div>
           <div class="blog-author">Author: ${blog.author}</div>
