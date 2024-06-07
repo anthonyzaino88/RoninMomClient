@@ -25,14 +25,16 @@ class BlogComponent extends HTMLElement {
       <style>
         .blog-container {
           padding: 20px;
-          display: flex;
-          justify-content: center;
+          display: block;
+          max-width: 1200px;
+          margin-left: auto;
+          margin-right: auto;
         }
         .blogs {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           gap: 20px;
-          max-width: 1200px;
+    
         }
         .blog {
           border: 1px solid #ccc;
