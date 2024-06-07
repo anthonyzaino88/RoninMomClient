@@ -23,18 +23,28 @@ class BlogComponent extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <style>
+        :host {
+          display: block;
+        }
+        body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          overflow: auto;
+        }
         .blog-container {
           padding: 20px;
           display: block;
           max-width: 1200px;
           margin-left: auto;
           margin-right: auto;
+          margin-bottom: 8rem;
+          
         }
         .blogs {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           gap: 20px;
-    
         }
         .blog {
           border: 1px solid #ccc;
