@@ -43,7 +43,7 @@
           "id": 2,
           "title": "Ditching Plastic for Silicone and Glass",
           "dateWritten": "2024-06-10",
-          "author": "Joanna Zaino",
+          "author": "Jane Doe",
           "link": "blog.html?id=2",
           "content": [
             {
@@ -77,6 +77,49 @@
           ],
           "keywords": ["Eco-Friendly", "Reusable", "Silicone Bags", "Glass Containers", "Sustainability"],
           "image": "https://example.com/images/silicone-glass.jpg"
+        },
+        {
+          "id": 3,
+          "title": "DIY Disinfectant Spray with Dr. Bronner's Soap and Distilled Vinegar",
+          "dateWritten": "2024-07-15",
+          "author": "Jane Doe",
+          "link": "blog.html?id=3",
+          "content": [
+            {
+              "contentTitle": "Why Make Your Own Disinfectant Spray?",
+              "contentBody": "Store-bought disinfectants are often filled with toxic chemicals that can be harmful to our health and the environment. By making your own, you can control the ingredients, ensuring they’re safe and natural. Plus, it’s a great way to save money."
+            },
+            {
+              "contentTitle": "Ingredients You’ll Need",
+              "contentBody": "Dr. Bronner's Liquid Soap: This versatile, biodegradable soap is perfect for cleaning.\n\nDistilled White Vinegar: A natural disinfectant that helps to kill germs.\n\nWater: To dilute the mixture.\n\nEssential Oils (Optional): For added fragrance and cleaning power.\n\nGlass Spray Bottle: Durable and reusable, it’s the perfect container for your homemade cleaner."
+            },
+            {
+              "contentTitle": "How to Make Your DIY Disinfectant Spray",
+              "contentBody": "Gather Your Supplies: Start with a clean, empty glass spray bottle.\n\nMix the Ingredients:\n\nAdd 2 tablespoons of Dr. Bronner's liquid soap to the bottle.\n\nPour in 1 cup of distilled white vinegar.\n\nAdd 1 cup of water to dilute the mixture.\n\nIf desired, add 10-20 drops of essential oil (like tea tree or lavender) for extra disinfecting power and a pleasant scent.\n\nShake Well: Secure the spray nozzle and shake the bottle to mix everything thoroughly."
+            },
+            {
+              "contentTitle": "Using Your Homemade Disinfectant Spray",
+              "contentBody": "Spray the mixture onto surfaces like countertops, sinks, and bathroom fixtures. Wipe clean with a cloth. The vinegar and soap work together to cut through grime and kill bacteria, leaving your home sparkling clean."
+            },
+            {
+              "contentTitle": "Benefits of Homemade Disinfectant Spray",
+              "contentBody": "Non-Toxic: Free from harmful chemicals, it’s safe to use around children and pets.\n\nEco-Friendly: Made from natural, biodegradable ingredients.\n\nCost-Effective: Significantly cheaper than store-bought cleaners.\n\nCustomizable: Adjust the ingredients and scents to suit your preferences."
+            },
+            {
+              "contentTitle": "A Simple and Effective Solution",
+              "contentBody": "Making your own disinfectant spray is a small change that can have a big impact. It’s an easy way to reduce your family’s exposure to toxins and contribute to a healthier home and environment. Plus, you’ll love how much money you save in the process!"
+            },
+            {
+              "contentTitle": "Recommended Products",
+              "contentBody": "Dr. Bronner's Liquid Soap\n\nDistilled White Vinegar\n\nGlass Spray Bottle"
+            },
+            {
+              "contentTitle": "",
+              "contentBody": "Try this DIY disinfectant spray and see how simple, effective, and satisfying it is to clean your home with natural ingredients. You’ll never want to go back to store-bought cleaners again!"
+            }
+          ],
+          "keywords": ["DIY", "Disinfectant Spray", "Eco-Friendly", "Non-Toxic"],
+          "image": "https://example.com/images/disinfectant-spray.jpg"
         }
       ]
     },
@@ -85,7 +128,7 @@
       "name": "Health",
       "blogs": [
         {
-          "id": 3,
+          "id": 4,
           "title": "The Benefits of a Healthy Diet",
           "dateWritten": "2024-03-10",
           "author": "Alice Brown",
@@ -95,7 +138,7 @@
           "image": "https://example.com/images/healthy-diet.jpg"
         },
         {
-          "id": 4,
+          "id": 5,
           "title": "Mental Health Awareness",
           "dateWritten": "2024-02-20",
           "author": "Bob White",
@@ -111,7 +154,7 @@
       "name": "Spirit",
       "blogs": [
         {
-          "id": 5,
+          "id": 6,
           "title": "Top Destinations for 2024",
           "dateWritten": "2024-01-15",
           "author": "Chris Green",
@@ -121,7 +164,7 @@
           "image": "https://example.com/images/top-destinations-2024.jpg"
         },
         {
-          "id": 6,
+          "id": 7,
           "title": "Travel Tips for a Smooth Journey",
           "dateWritten": "2023-12-05",
           "author": "Diana Blue",
