@@ -26,45 +26,68 @@
     </header>
 
     <div class="wrapper">
-        <section class="mission">
+        <section class="mission fade-in-right">
             <h2>Our Mission</h2>
             <p>Ronin Mom embarks on a journey to empower individuals towards self-sufficiency, holistic well-being, and sustainable living. Discover how embracing the Ronin principles can transform your life.</p>
         </section>
 
-        <section class="cta">
+        <section class="cta fade-in-left">
             <h2>Join Our Community</h2>
             <div class="signup-desc">Become a part of the movement towards a healthier, self-sufficient lifestyle.</div>
             <button>SIGN UP</button>
         </section>
     </div>
-<footer-component></footer-component>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const observerOptions = {
-    root: null,
-    threshold: 0.1,
-    rootMargin: "0px"
-  };
+    <footer-component class="fade-in"></footer-component>
 
-  const observerCallback = (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  };
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px"
+            };
 
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
 
-  const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-  elementsToAnimate.forEach(el => {
-    observer.observe(el);
-  });
-});
-</script>
+            const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .fade-in-left, .fade-in-right');
+
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+
+            const footerObserverOptions = {
+                root: null,
+                threshold: 0,
+                rootMargin: "0px"
+            };
+
+            const footerObserverCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    const footer = document.querySelector('footer-component');
+                    if (entry.isIntersecting) {
+                        footer.classList.remove('visible');
+                    } else {
+                        footer.classList.add('visible');
+                    }
+                });
+            };
+
+            const footerObserver = new IntersectionObserver(footerObserverCallback, footerObserverOptions);
+
+            const sections = document.querySelectorAll('.mission, .cta');
+            sections.forEach(section => footerObserver.observe(section));
+        });
+    </script>
 
 </body>
 </html>

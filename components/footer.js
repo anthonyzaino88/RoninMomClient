@@ -6,48 +6,7 @@ class FooterComponent extends HTMLElement {
   }
 
   connectedCallback() {
-    this.initIntersectionObserver();
-  }
-
-  initIntersectionObserver() {
-    const observerOptions = {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px'
-    };
-
-    const observerCallback = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.target.classList.contains('cta')) {
-          if (entry.isIntersecting) {
-            this.hideFooter();
-          } else {
-            this.showFooter();
-          }
-        } else if (entry.target.classList.contains('mission')) {
-          if (entry.isIntersecting) {
-            this.hideFooter();
-          } else if (!document.querySelector('.cta').isIntersecting) {
-            this.showFooter();
-          }
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    const missionSection = document.querySelector('.mission');
-    const ctaSection = document.querySelector('.cta');
-
-    if (missionSection) observer.observe(missionSection);
-    if (ctaSection) observer.observe(ctaSection);
-  }
-
-  hideFooter() {
-    this.shadowRoot.querySelector('.footer').classList.remove('visible');
-  }
-
-  showFooter() {
-    this.shadowRoot.querySelector('.footer').classList.add('visible');
+    // No need for observer logic here
   }
 
   render() {
@@ -59,8 +18,6 @@ class FooterComponent extends HTMLElement {
           text-align: center;
           color: #302A25;
           font-family: 'Hightower Text', serif;
-          position: fixed;
-          bottom: 0;
           width: 100%;
           opacity: 1;
           transition: opacity 0.5s ease;
@@ -114,3 +71,4 @@ class FooterComponent extends HTMLElement {
 }
 
 customElements.define('footer-component', FooterComponent);
+
