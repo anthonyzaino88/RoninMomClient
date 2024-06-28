@@ -122,58 +122,6 @@
           "image": "https://example.com/images/disinfectant-spray.jpg"
         }
       ]
-    },
-    {
-      "id": 2,
-      "name": "Health",
-      "blogs": [
-        {
-          "id": 4,
-          "title": "The Benefits of a Healthy Diet",
-          "dateWritten": "2024-03-10",
-          "author": "Alice Brown",
-          "link": "https://example.com/blog/benefits-of-healthy-diet",
-          "content": "A healthy diet can improve your overall well-being and reduce the risk of chronic diseases...",
-          "keywords": ["Health", "Diet", "Well-being"],
-          "image": "https://example.com/images/healthy-diet.jpg"
-        },
-        {
-          "id": 5,
-          "title": "Mental Health Awareness",
-          "dateWritten": "2024-02-20",
-          "author": "Bob White",
-          "link": "https://example.com/blog/mental-health-awareness",
-          "content": "Raising awareness about mental health is crucial for early intervention and treatment...",
-          "keywords": ["Mental Health", "Awareness", "Treatment"],
-          "image": "https://example.com/images/mental-health-awareness.jpg"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Spirit",
-      "blogs": [
-        {
-          "id": 6,
-          "title": "Top Destinations for 2024",
-          "dateWritten": "2024-01-15",
-          "author": "Chris Green",
-          "link": "https://example.com/blog/top-destinations-2024",
-          "content": "Explore the top travel destinations for 2024, from tropical beaches to bustling cities...",
-          "keywords": ["Travel", "Destinations", "2024"],
-          "image": "https://example.com/images/top-destinations-2024.jpg"
-        },
-        {
-          "id": 7,
-          "title": "Travel Tips for a Smooth Journey",
-          "dateWritten": "2023-12-05",
-          "author": "Diana Blue",
-          "link": "https://example.com/blog/travel-tips",
-          "content": "Planning your trip can make all the difference for a smooth and enjoyable journey...",
-          "keywords": ["Travel", "Tips", "Journey"],
-          "image": "https://example.com/images/travel-tips.jpg"
-        }
-      ]
     }
   ]
 }
