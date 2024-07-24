@@ -11,7 +11,7 @@ class BlogComponent extends HTMLElement {
 
   async fetchBlogData() {
     try {
-      const response = await fetch("/data/blog.json");
+      const response = await fetch("./data/blog.json");
       const data = await response.json();
       this.renderBlogs(data);
     } catch (error) {

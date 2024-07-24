@@ -1,93 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Ronin Mom | Pioneering the Self-Sufficient Lifestyle</title>
-    <link rel="stylesheet" href="./assets/css/signup.css">
-    <link rel="stylesheet" href="https://use.typekit.net/hji1dmf.css">
-    <link rel="stylesheet" href="./assets/styles/home.css">
-    <link rel="stylesheet" href="./globleStyles.css">
+    <link rel="stylesheet" href="./assets/css/signup.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/hji1dmf.css" />
+    <link rel="stylesheet" href="./assets/styles/home.css" />
+    <link rel="stylesheet" href="./globleStyles.css" />
     <script src="./components/footer.js"></script>
-</head>
-<body>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ER6VM479RR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-ER6VM479RR");
+    </script>
+  </head>
+  <body>
     <header>
-        <img src="./assets/img/banner.png" class="fade-in" alt="Ronin Mom Logo">
-        <div class="mobileheader">
-            <div class="mobile-title slide-in-left">Ronin Mom</div>
-            <div class="mobile-sub-title slide-in-right">Master life with sustainability and wellness</div>
+      <img src="./assets/img/banner.png" class="fade-in" alt="Ronin Mom Logo" />
+      <div class="mobileheader">
+        <div class="mobile-title slide-in-left">Ronin Mom</div>
+        <div class="mobile-sub-title slide-in-right">
+          Master life with sustainability and wellness
         </div>
-        <div class="links fade-in">
-            <a href="./pages/about.html">About</a>
-            <a href="./pages/blog.html">Blog</a>
-            <a href="./pages/shop.html">Shop</a>
-        </div>
+      </div>
+      <div class="links fade-in">
+        <a href="./pages/about.html">About</a>
+        <a href="./pages/blog.html">Blog</a>
+        <a href="./pages/shop.html">Shop</a>
+      </div>
     </header>
 
     <div class="wrapper">
-        <section class="mission fade-in-right">
-            <h2>Our Mission</h2>
-            <p>Ronin Mom embarks on a journey to empower individuals towards self-sufficiency, holistic well-being, and sustainable living. Discover how embracing the Ronin principles can transform your life.</p>
-        </section>
+      <section class="mission fade-in-right">
+        <h2>Our Mission</h2>
+        <p>
+          Ronin Mom embarks on a journey to empower individuals towards
+          self-sufficiency, holistic well-being, and sustainable living.
+          Discover how embracing the Ronin principles can transform your life.
+        </p>
+      </section>
 
-        <section class="cta fade-in-left">
-            <h2>Join Our Community</h2>
-            <div class="signup-desc">Become a part of the movement towards a healthier, self-sufficient lifestyle.</div>
-            <button>SIGN UP</button>
-        </section>
+      <section class="cta fade-in-left">
+        <h2>Join Our Community</h2>
+        <div class="signup-desc">
+          Become a part of the movement towards a healthier, self-sufficient
+          lifestyle.
+        </div>
+        <button onclick="window.location.href='./pages/singup.html'">
+          SIGN UP
+        </button>
+      </section>
     </div>
 
     <footer-component class="fade-in"></footer-component>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                threshold: 0.1,
-                rootMargin: "0px"
-            };
+      document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+          root: null,
+          threshold: 0.1,
+          rootMargin: "0px",
+        };
 
-            const observerCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            };
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target);
+            }
+          });
+        };
 
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
 
-            const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .fade-in-left, .fade-in-right');
+        const elementsToAnimate = document.querySelectorAll(
+          ".fade-in, .slide-in-left, .slide-in-right, .fade-in-left, .fade-in-right"
+        );
 
-            elementsToAnimate.forEach(el => {
-                observer.observe(el);
-            });
-
-            const footerObserverOptions = {
-                root: null,
-                threshold: 0,
-                rootMargin: "0px"
-            };
-
-            const footerObserverCallback = (entries, observer) => {
-                entries.forEach(entry => {
-                    const footer = document.querySelector('footer-component');
-                    if (entry.isIntersecting) {
-                        footer.classList.remove('visible');
-                    } else {
-                        footer.classList.add('visible');
-                    }
-                });
-            };
-
-            const footerObserver = new IntersectionObserver(footerObserverCallback, footerObserverOptions);
-
-            const sections = document.querySelectorAll('.mission, .cta');
-            sections.forEach(section => footerObserver.observe(section));
+        elementsToAnimate.forEach((el) => {
+          observer.observe(el);
         });
-    </script>
 
-</body>
+        const footerObserverOptions = {
+          root: null,
+          threshold: 0,
+          rootMargin: "0px",
+        };
+
+        const footerObserverCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            const footer = document.querySelector("footer-component");
+            if (entry.isIntersecting) {
+              footer.classList.remove("visible");
+            } else {
+              footer.classList.add("visible");
+            }
+          });
+        };
+
+        const footerObserver = new IntersectionObserver(
+          footerObserverCallback,
+          footerObserverOptions
+        );
+
+        const sections = document.querySelectorAll(".mission, .cta");
+        sections.forEach((section) => footerObserver.observe(section));
+      });
+    </script>
+  </body>
 </html>
