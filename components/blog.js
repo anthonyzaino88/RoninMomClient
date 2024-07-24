@@ -1,7 +1,7 @@
 class BlogComponent extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -11,11 +11,11 @@ class BlogComponent extends HTMLElement {
 
   async fetchBlogData() {
     try {
-      const response = await fetch('https://anthonyzaino88.github.io/RoninMomClient/data/blog.json');
+      const response = await fetch("/data/blog.json");
       const data = await response.json();
       this.renderBlogs(data);
     } catch (error) {
-      console.error('Failed to fetch blog data:', error);
+      console.error("Failed to fetch blog data:", error);
       this.shadowRoot.innerHTML = `<p>Error loading blogs.</p>`;
     }
   }
@@ -26,26 +26,28 @@ class BlogComponent extends HTMLElement {
         :host {
           display: block;
         }
-        body, html {
+
+        body {
           margin: 0;
           padding: 0;
-          height: 100%;
-          overflow: auto;
+          box-sizing: border-box;
+          font-family: 'High Tower Text', serif;
+          background-color: whitesmoke;
         }
+
         .blog-container {
           padding: 20px;
           display: block;
-          max-width: 1200px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 8rem;
-          
+          margin-left: 20px;
+          margin-right: 20px
         }
+
         .blogs {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           gap: 20px;
         }
+
         .blog {
           border: 1px solid #ccc;
           padding: 10px;
@@ -54,25 +56,22 @@ class BlogComponent extends HTMLElement {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           text-align: center;
         }
+
         .blog img {
           max-width: 100%;
+          height: 200px;
           border-radius: 5px;
         }
+
         .blog-title {
           font-size: 18px;
           font-weight: bold;
-          margin-top: 10px;
+          margin-top: 12px;
+          height: 75px;
+          text-align: start;
+
         }
-        .blog-date, .blog-author {
-          font-size: 14px;
-          color: gray;
-        }
-        .blog-content {
-          margin-top: 10px;
-          height: 60px; /* Fixed height to show a snippet */
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+
         .read-more {
           display: inline-block;
           margin-top: 10px;
@@ -90,41 +89,34 @@ class BlogComponent extends HTMLElement {
   }
 
   renderBlogs(data) {
-    const blogsContainer = this.shadowRoot.querySelector('.blogs');
-    data.categories.forEach(category => {
-      category.blogs.forEach(blog => {
-        const blogElement = document.createElement('div');
-        blogElement.classList.add('blog');
-        let contentSnippet = 'No content available';
-        
-        if (blog.content && blog.content.length > 0) {
-          const firstContentSection = blog.content[0];
-          if (firstContentSection.contentBody) {
-            contentSnippet = firstContentSection.contentBody.substring(0, 100) + '...';
-          }
-        }
+    const blogsContainer = this.shadowRoot.querySelector(".blogs");
+    data.categories.forEach((category) => {
+      category.blogs.forEach((blog) => {
+        const blogElement = document.createElement("div");
+        blogElement.classList.add("blog");
 
         blogElement.innerHTML = `
-          <img src="${blog.image || 'default-image.jpg'}" alt="${blog.title}">
+          <img src="${blog.image || "default-image.jpg"}" alt="${blog.title}">
           <div class="blog-title">${blog.title}</div>
-          <div class="blog-date">Date: ${blog.dateWritten}</div>
-          <div class="blog-author">Author: ${blog.author}</div>
-          <div class="blog-content">${contentSnippet}</div>
-          <a class="read-more" href="javascript:void(0);" data-id="${blog.id}">Read more</a>
+          <a class="read-more" href="javascript:void(0);" data-id="${
+            blog.id
+          }">Read more</a>
         `;
-        blogElement.querySelector('.read-more').addEventListener('click', () => this.showSingleBlog(blog.id));
+        blogElement
+          .querySelector(".read-more")
+          .addEventListener("click", () => this.showSingleBlog(blog.id));
         blogsContainer.appendChild(blogElement);
       });
     });
   }
 
   showSingleBlog(id) {
-    const singleBlogComponent = document.querySelector('single-blog-component');
-    const blogComponent = this.shadowRoot.querySelector('.blog-container');
-    blogComponent.style.display = 'none';
-    singleBlogComponent.style.display = 'block';
+    const singleBlogComponent = document.querySelector("single-blog-component");
+    const blogComponent = this.shadowRoot.querySelector(".blog-container");
+    blogComponent.style.display = "none";
+    singleBlogComponent.style.display = "block";
     singleBlogComponent.setBlogId(id);
   }
 }
 
-customElements.define('blog-component', BlogComponent);
+customElements.define("blog-component", BlogComponent);

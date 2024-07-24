@@ -1,12 +1,12 @@
 class RoninNavbar extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' }); // Enable encapsulated style and markup
-        this.render();
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" }); // Enable encapsulated style and markup
+    this.render();
+  }
 
-    render() {
-        this.shadowRoot.innerHTML = `
+  render() {
+    this.shadowRoot.innerHTML = `
         <style>
             nav {
                
@@ -18,7 +18,7 @@ class RoninNavbar extends HTMLElement {
                 align-items: center;
                 background-color: #302A25; /* Default color */
                 z-index: 1000; /* Ensure navbar is always on top */
-                height: 100px;
+                height: 60px;
             }
 
             a {
@@ -35,21 +35,20 @@ class RoninNavbar extends HTMLElement {
 
             .logo {
                 color: white;
-                font-size: 3rem;
        
             }
 
         </style>
         <nav>
-            <div class="logo"><a href="https://anthonyzaino88.github.io/RoninMomClient/">RM</a></div>
+            <div class="logo"><a href="/">RM</a></div>
             <div class="links">
-                <a href="./pages/about.html">About</a>
-                <a href="./pages/blog.html">Blog</a>
-                <a href="./pages/shop.html">Shop</a>
+                <a href="/pages/about.html">About</a>
+                <a href="/pages/blog.html">Blog</a>
+                <a href="/pages/shop.html">Shop</a>
             </div>
         </nav>
         `;
-    }
+  }
 }
 
-customElements.define('ronin-navbar', RoninNavbar);
+customElements.define("ronin-navbar", RoninNavbar);

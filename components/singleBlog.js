@@ -1,7 +1,7 @@
 class SingleBlogComponent extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -15,16 +15,18 @@ class SingleBlogComponent extends HTMLElement {
 
   async fetchBlogData() {
     try {
-      const response = await fetch('https://anthonyzaino88.github.io/RoninMomClient/data/blog.json');
+      const response = await fetch("/data/blog.json");
       const data = await response.json();
-      const blog = data.categories.flatMap(category => category.blogs).find(blog => blog.id == this.blogId);
+      const blog = data.categories
+        .flatMap((category) => category.blogs)
+        .find((blog) => blog.id == this.blogId);
       if (blog) {
         this.renderBlog(blog);
       } else {
         this.shadowRoot.innerHTML = `<p>Blog not found.</p>`;
       }
     } catch (error) {
-      console.error('Failed to fetch blog data:', error);
+      console.error("Failed to fetch blog data:", error);
       this.shadowRoot.innerHTML = `<p>Error loading blog.</p>`;
     }
   }
@@ -87,12 +89,11 @@ class SingleBlogComponent extends HTMLElement {
           display: inline-block;
           margin-top: 20px;
           padding: 10px 20px;
-          background-color: #F4F1EA;
-          color: #302A25;
+          background-color: #302A25;
+          color: whitesmoke;
           text-decoration: none;
           border-radius: 5px;
           cursor: pointer;
-          margin-bottom: 8rem;
         }
       </style>
       <div class="blog">
@@ -108,41 +109,56 @@ class SingleBlogComponent extends HTMLElement {
       </div>
       <div class="back-button">Back to Blog List</div>
     `;
-    this.shadowRoot.querySelector('.back-button').addEventListener('click', () => this.backToBlogList());
+    this.shadowRoot
+      .querySelector(".back-button")
+      .addEventListener("click", () => this.backToBlogList());
   }
 
   renderBlog(blog) {
-    const imageElement = this.shadowRoot.querySelector('#blog-image');
-    const titleElement = this.shadowRoot.querySelector('.blog-title');
-    const dateElement = this.shadowRoot.querySelector('.blog-date');
-    const authorElement = this.shadowRoot.querySelector('.blog-author');
-    const contentElement = this.shadowRoot.querySelector('.blog-content');
+    const imageElement = this.shadowRoot.querySelector("#blog-image");
+    const titleElement = this.shadowRoot.querySelector(".blog-title");
+    const dateElement = this.shadowRoot.querySelector(".blog-date");
+    const authorElement = this.shadowRoot.querySelector(".blog-author");
+    const contentElement = this.shadowRoot.querySelector(".blog-content");
 
     if (blog.image) {
       imageElement.src = blog.image;
-      imageElement.style.display = 'block';
+      imageElement.style.display = "block";
     } else {
-      imageElement.style.display = 'none';
+      imageElement.style.display = "none";
     }
 
     titleElement.textContent = blog.title;
     dateElement.textContent = `Date: ${blog.dateWritten}`;
     authorElement.textContent = `Author: ${blog.author}`;
-    
+
     contentElement.innerHTML = `
-      ${blog.content.map(section => `
-        ${section.contentTitle ? `<h3>${section.contentTitle}</h3>` : ''}
+      ${blog.content
+        .map(
+          (section) => `
+        ${section.contentTitle ? `<h3>${section.contentTitle}</h3>` : ""}
         <p>${section.contentBody}</p>
-      `).join('')}
-      ${blog.images ? blog.images.map(image => `<img src="${image}" alt="Blog Image">`).join('') : ''}
+      `
+        )
+        .join("")}
+      ${
+        blog.images
+          ? blog.images
+              .map((image) => `<img src="${image}" alt="Blog Image">`)
+              .join("")
+          : ""
+      }
     `;
   }
 
   backToBlogList() {
-    const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
-    blogComponent.style.display = 'block';
-    this.style.display = 'none';
+    const blogComponent = document
+      .querySelector("blog-component")
+      .shadowRoot.querySelector(".blog-container");
+    blogComponent.style.display = "block";
+    this.style.display = "none";
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
 
-customElements.define('single-blog-component', SingleBlogComponent);
+customElements.define("single-blog-component", SingleBlogComponent);

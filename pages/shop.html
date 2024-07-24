@@ -1,16 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ronin Mom | Shop</title>
-    <link rel="stylesheet" href="../globleStyles.css">
-   
-</head>
-<body>
- <ronin-navbar></ronin-navbar>   
-<div>Hello World</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Coming Soon - Ronin Mom</title>
+    <link rel="stylesheet" href="https://use.typekit.net/hji1dmf.css" />
+    <link rel="stylesheet" href="./globleStyles.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #333;
+        font-family: "hightower-text", serif;
+        background-color: #f4f1ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
 
-<script src="../components/navbar.js"></script>
-</body>
+      .coming-soon-container {
+        background-color: #302a25;
+        color: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        max-width: 600px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+      }
+
+      .coming-soon-container h2 {
+        font-size: 40px;
+        font-weight: 800;
+        margin: 0px;
+        padding: 1rem;
+      }
+
+      .coming-soon-container p {
+        padding: 1rem;
+        font-size: 30px;
+        color: #f4f1ea;
+      }
+
+      .coming-soon-container button {
+        background-color: #9e4624;
+        border: 2px solid #302a25;
+        padding: 10px 35px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: border-color 0.3s ease, font-weight 0.3s ease,
+          transform 0.3s ease;
+        color: #f4f1ea;
+        font-weight: 500;
+        margin-top: 1rem;
+      }
+
+      .coming-soon-container button:hover {
+        background-color: #9e4624;
+        border-color: #f4f1ea;
+        color: #f4f1ea;
+        font-weight: 600;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="coming-soon-container">
+      <h2>Shop Coming Soon!</h2>
+      <p>
+        We are working hard to bring you an amazing shopping experience. Stay
+        tuned for updates!
+      </p>
+      <button onclick="window.location.href='/index.html'">Back to Home</button>
+    </div>
+  </body>
 </html>

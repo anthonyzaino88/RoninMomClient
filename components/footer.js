@@ -1,7 +1,7 @@
 class FooterComponent extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
     this.render();
   }
 
@@ -18,9 +18,10 @@ class FooterComponent extends HTMLElement {
           text-align: center;
           color: #302A25;
           font-family: 'Hightower Text', serif;
-          width: 100%;
           opacity: 1;
           transition: opacity 0.5s ease;
+       
+          
         }
 
         .footer.hidden {
@@ -70,5 +71,4 @@ class FooterComponent extends HTMLElement {
   }
 }
 
-customElements.define('footer-component', FooterComponent);
-
+customElements.define("footer-component", FooterComponent);

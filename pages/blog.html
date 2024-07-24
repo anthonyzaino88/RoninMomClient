@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Ronin Mom | Blog</title>
-  <link rel="stylesheet" href="../globalStyles.css">
-  <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Ronin Mom | Blog</title>
+    <link rel="stylesheet" href="../globleStyles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/hji1dmf.css" />
+    <script src="../components/navbar.js"></script>
+    <script src="../components/blog.js"></script>
+    <script src="../components/singleBlog.js"></script>
+    <script src="../components/footer.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "hightower-text", serif;
+        background-color: #f4f1ea;
+        color: #302a25;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-    body {
-      margin: 0px;
-    }
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-    .container {
-      margin-top: 3rem;
-    }
-    single-blog-component {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <ronin-navbar></ronin-navbar>
-  <div class="container">
-    <h1>Ronin Mom | Blog</h1>
-    <blog-component></blog-component>
-    <single-blog-component></single-blog-component>
-  </div>
-  <footer-component></footer-component>
+      h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
 
-  <script src="../components/navbar.js"></script>
-  <script src="../components/blog.js"></script>
-  <script src="../components/singleBlog.js"></script>
-  <script src="../components/footer.js"></script>
-</body>
+      header {
+        margin-top: 3rem;
+        margin-bottom: -2rem;
+      }
+
+      single-blog-component {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ronin-navbar></ronin-navbar>
+    <header>
+      <h1>Ronin Mom Blog</h1>
+    </header>
+    <div class="main-content">
+      <div class="container">
+        <blog-component></blog-component>
+        <single-blog-component></single-blog-component>
+      </div>
+    </div>
+    <footer-component></footer-component>
+  </body>
 </html>
