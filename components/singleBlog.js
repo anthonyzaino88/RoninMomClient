@@ -15,7 +15,7 @@ class SingleBlogComponent extends HTMLElement {
 
   async fetchBlogData() {
     try {
-      const response = await fetch("./data/blog.json");
+      const response = await fetch("https://anthonyzaino88.github.io/RoninMomClient/data/blog.json");
       const data = await response.json();
       const blog = data.categories
         .flatMap((category) => category.blogs)
