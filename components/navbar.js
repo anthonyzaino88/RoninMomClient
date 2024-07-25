@@ -42,9 +42,9 @@ class RoninNavbar extends HTMLElement {
         <nav>
             <div class="logo"><a href="/">RM</a></div>
             <div class="links">
-                <a href="/pages/about.html">About</a>
-                <a href="/pages/blog.html">Blog</a>
-                <a href="/pages/shop.html">Shop</a>
+                <a href="https://anthonyzaino88.github.io/RoninMomClient/pages/about.html">About</a>
+                <a href="https://anthonyzaino88.github.io/RoninMomClient/pages/blog.html">Blog</a>
+                <a href="https://anthonyzaino88.github.io/RoninMomClient/pages/shop.html">Shop</a>
             </div>
         </nav>
         `;
