@@ -42,7 +42,7 @@
             "Cotton Rags",
             "Sustainability"
           ],
-          "image": "../assets/img/towel.jpeg"
+          "image": "../assets/img/towel.webp"
         },
         {
           "id": 2,
@@ -83,7 +83,7 @@
             "Glass Containers",
             "Sustainability"
           ],
-          "image": "https://shopwhatsgood.com/cdn/shop/files/whatsgood_ziptop_silicone_bag_sandwich_with_hand_for_scale_2000x.jpg?v=1690576132"
+          "image": "../assets/img/ziptop.webp"
         },
         {
           "id": 3,
@@ -131,7 +131,7 @@
             "Eco-Friendly",
             "Non-Toxic"
           ],
-          "image": "../assets/img/bottles.PNG"
+          "image": "../assets/img/bottles.webp"
         }
       ]
     }

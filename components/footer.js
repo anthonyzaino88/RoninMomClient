@@ -60,7 +60,7 @@ class FooterComponent extends HTMLElement {
       <div class="footer visible">
         <div class="social-links">
           <a href="https://facebook.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/facebook.svg" alt="Facebook"></a>
-          <a href="https://instagram.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/instagram.svg" alt="Instagram"></a>
+          <a href="https://www.instagram.com/theroninmom?igshid=MjVnczNlZGRrZWll&utm_source=qr" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/instagram.svg" alt="Instagram"></a>
           <a href="https://tiktok.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/tiktok.svg" alt="TikTok"></a>
         </div>
         <div class="copyright">
