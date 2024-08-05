@@ -95,5 +95,20 @@
       </div>
     </div>
     <footer-component></footer-component>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get('id');
+
+        if (blogId) {
+          const singleBlogComponent = document.querySelector('single-blog-component');
+          singleBlogComponent.style.display = 'block';
+          singleBlogComponent.setBlogId(blogId);
+
+          const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
+          blogComponent.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
