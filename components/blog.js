@@ -98,9 +98,7 @@ class BlogComponent extends HTMLElement {
         blogElement.innerHTML = `
           <img src="${blog.image || "default-image.jpg"}" alt="${blog.title}">
           <div class="blog-title">${blog.title}</div>
-          <a class="read-more" href="javascript:void(0);" data-id="${
-            blog.id
-          }">Read more</a>
+          <a class="read-more" href="javascript:void(0);" data-id="${blog.id}">Read more</a>
         `;
         blogElement
           .querySelector(".read-more")
@@ -116,6 +114,8 @@ class BlogComponent extends HTMLElement {
     blogComponent.style.display = "none";
     singleBlogComponent.style.display = "block";
     singleBlogComponent.setBlogId(id);
+    history.pushState({ id: id }, "", `?id=${id}`);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top
   }
 }
 
