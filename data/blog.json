@@ -5,12 +5,12 @@
       "name": "Sustainability",
       "blogs": [
         {
-          "id": 1,
+          "id": "replacing-paper-towels",
           "title": "The Surprising Benefits of Replacing Paper Towels with Reusable Organic Cotton Dish Cloths",
           "description": "Discover the environmental and cost benefits of switching from paper towels to reusable organic cotton dish cloths.",
           "dateWritten": "2024-05-25",
           "author": "Ronin Mom",
-          "link": "blog.html?id=1",
+          "link": "blog.html?id=replacing-paper-towels",
           "content": [
             {
               "contentTitle": "The Turning Point",
@@ -46,12 +46,12 @@
           "image": "../assets/img/towel.webp"
         },
         {
-          "id": 2,
+          "id": "ditching-plastic",
           "title": "Ditching Plastic for Silicone and Glass",
           "description": "Explore the benefits of replacing plastic containers with silicone and glass alternatives for a healthier, more sustainable lifestyle.",
           "dateWritten": "2024-06-10",
           "author": "Ronin Mom",
-          "link": "blog.html?id=2",
+          "link": "blog.html?id=ditching-plastic",
           "content": [
             {
               "contentTitle": "The Problem with Plastics",
@@ -88,12 +88,12 @@
           "image": "../assets/img/ziptop.webp"
         },
         {
-          "id": 3,
+          "id": "diy-disinfectant-spray",
           "title": "DIY Disinfectant Spray with Dr. Bronner's Soap and Distilled Vinegar",
           "description": "Learn how to make a natural, effective disinfectant spray using Dr. Bronner's soap and distilled vinegar.",
           "dateWritten": "2024-07-15",
           "author": "Ronin Mom",
-          "link": "blog.html?id=3",
+          "link": "blog.html?id=diy-disinfectant-spray",
           "content": [
             {
               "contentTitle": "Why Make Your Own Disinfectant Spray?",
@@ -140,3 +140,4 @@
     }
   ]
 }
+
