@@ -200,19 +200,31 @@
     </div>
     <footer-component></footer-component>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const blogId = urlParams.get('id');
+       document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const blogId = urlParams.get('id');
 
-        if (blogId) {
-          const singleBlogComponent = document.querySelector('single-blog-component');
-          singleBlogComponent.style.display = 'block';
-          singleBlogComponent.setBlogId(blogId);
+      if (blogId) {
+        const singleBlogComponent = document.querySelector('single-blog-component');
+        singleBlogComponent.style.display = 'block';
+        singleBlogComponent.setBlogId(blogId);
 
-          const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
-          blogComponent.style.display = 'none';
-        }
-      });
+        const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
+        blogComponent.style.display = 'none';
+
+        fetch("https://roninmom.com/data/blog.json")
+          .then(response => response.json())
+          .then(data => {
+            const blog = data.categories.flatMap(category => category.blogs).find(blog => blog.id === parseInt(blogId));
+            if (blog) {
+              updateMetaTags(blog);
+            }
+          })
+          .catch(error => {
+            console.error('Failed to fetch blog data:', error);
+          });
+      }
+    });
     </script>
   </body>
 </html>
