@@ -30,106 +30,67 @@
     <script src="../components/singleBlog.js"></script>
     <script src="../components/footer.js"></script>
     <script>
-      function updateMetaTags(blog) {
-        document.title = `${blog.title} - Ronin Mom`;
+function updateMetaTags(blog) {
+      console.log('Updating meta tags for blog:', blog);
 
-        let metaDescription = document.querySelector('meta[name="description"]');
-        if (!metaDescription) {
-          metaDescription = document.createElement('meta');
-          metaDescription.name = 'description';
-          document.head.appendChild(metaDescription);
-        }
-        metaDescription.content = blog.description;
+      document.title = `${blog.title} - Ronin Mom`;
 
-        let metaKeywords = document.querySelector('meta[name="keywords"]');
-        if (!metaKeywords) {
-          metaKeywords = document.createElement('meta');
-          metaKeywords.name = 'keywords';
-          document.head.appendChild(metaKeywords);
-        }
-        metaKeywords.content = blog.keywords.join(', ');
+      const metaDescription = document.querySelector('meta[name="description"]');
+      metaDescription.setAttribute('content', blog.description);
 
-        let metaAuthor = document.querySelector('meta[name="author"]');
-        if (!metaAuthor) {
-          metaAuthor = document.createElement('meta');
-          metaAuthor.name = 'author';
-          document.head.appendChild(metaAuthor);
-        }
-        metaAuthor.content = blog.author;
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      metaKeywords.setAttribute('content', blog.keywords.join(', '));
 
-        let metaOgTitle = document.querySelector('meta[property="og:title"]');
-        if (!metaOgTitle) {
-          metaOgTitle = document.createElement('meta');
-          metaOgTitle.setAttribute('property', 'og:title');
-          document.head.appendChild(metaOgTitle);
-        }
-        metaOgTitle.content = `${blog.title} - Ronin Mom`;
+      const metaAuthor = document.querySelector('meta[name="author"]');
+      metaAuthor.setAttribute('content', blog.author);
 
-        let metaOgDescription = document.querySelector('meta[property="og:description"]');
-        if (!metaOgDescription) {
-          metaOgDescription = document.createElement('meta');
-          metaOgDescription.setAttribute('property', 'og:description');
-          document.head.appendChild(metaOgDescription);
-        }
-        metaOgDescription.content = blog.description;
+      const metaOgTitle = document.querySelector('meta[property="og:title"]');
+      metaOgTitle.setAttribute('content', `${blog.title} - Ronin Mom`);
 
-        let metaOgImage = document.querySelector('meta[property="og:image"]');
-        if (!metaOgImage) {
-          metaOgImage = document.createElement('meta');
-          metaOgImage.setAttribute('property', 'og:image');
-          document.head.appendChild(metaOgImage);
-        }
-        metaOgImage.content = blog.image;
+      const metaOgDescription = document.querySelector('meta[property="og:description"]');
+      metaOgDescription.setAttribute('content', blog.description);
 
-        let metaOgUrl = document.querySelector('meta[property="og:url"]');
-        if (!metaOgUrl) {
-          metaOgUrl = document.createElement('meta');
-          metaOgUrl.setAttribute('property', 'og:url');
-          document.head.appendChild(metaOgUrl);
-        }
-        metaOgUrl.content = `https://roninmom.com/pages/blog.html?id=${blog.id}`;
+      const metaOgImage = document.querySelector('meta[property="og:image"]');
+      metaOgImage.setAttribute('content', blog.image);
 
-        let metaOgType = document.querySelector('meta[property="og:type"]');
-        if (!metaOgType) {
-          metaOgType = document.createElement('meta');
-          metaOgType.setAttribute('property', 'og:type');
-          document.head.appendChild(metaOgType);
-        }
-        metaOgType.content = 'article';
+      const metaOgUrl = document.querySelector('meta[property="og:url"]');
+      metaOgUrl.setAttribute('content', `https://roninmom.com/pages/blog.html?id=${blog.id}`);
 
-        let metaOgSiteName = document.querySelector('meta[property="og:site_name"]');
-        if (!metaOgSiteName) {
-          metaOgSiteName = document.createElement('meta');
-          metaOgSiteName.setAttribute('property', 'og:site_name');
-          document.head.appendChild(metaOgSiteName);
-        }
-        metaOgSiteName.content = 'Ronin Mom';
+      const metaOgType = document.querySelector('meta[property="og:type"]');
+      metaOgType.setAttribute('content', 'article');
+
+      const metaOgSiteName = document.querySelector('meta[property="og:site_name"]');
+      metaOgSiteName.setAttribute('content', 'Ronin Mom');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const blogId = urlParams.get('id');
+
+      if (blogId) {
+        const singleBlogComponent = document.querySelector('single-blog-component');
+        singleBlogComponent.style.display = 'block';
+        singleBlogComponent.setBlogId(blogId);
+
+        const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
+        blogComponent.style.display = 'none';
+
+        fetch("https://roninmom.com/data/blog.json")
+          .then(response => response.json())
+          .then(data => {
+            const blog = data.categories.flatMap(category => category.blogs).find(blog => blog.id === parseInt(blogId));
+            console.log('Fetched blog data:', blog);
+            if (blog) {
+              updateMetaTags(blog);
+            } else {
+              console.error('Blog not found');
+            }
+          })
+          .catch(error => {
+            console.error('Failed to fetch blog data:', error);
+          });
       }
-
-      document.addEventListener('DOMContentLoaded', () => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const blogId = urlParams.get('id');
-
-        if (blogId) {
-          fetch("https://roninmom.com/data/blog.json")
-            .then(response => response.json())
-            .then(data => {
-              const blog = data.categories.flatMap(category => category.blogs).find(blog => blog.id === parseInt(blogId));
-              if (blog) {
-                updateMetaTags(blog);
-                const singleBlogComponent = document.querySelector('single-blog-component');
-                singleBlogComponent.style.display = 'block';
-                singleBlogComponent.setBlogId(blogId);
-
-                const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
-                blogComponent.style.display = 'none';
-              }
-            })
-            .catch(error => {
-              console.error('Failed to fetch blog data:', error);
-            });
-        }
-      });
+    });
     </script>
       <!-- Google tag (gtag.js) -->
       <script
