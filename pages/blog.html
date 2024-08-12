@@ -32,49 +32,46 @@
     <script>
       function updateMetaTags(blog) {
         console.log('Updating meta tags for blog:', blog);
-  
+    
         document.title = `${blog.title} - Ronin Mom`;
-  
-        const metaDescription = document.querySelector('meta[name="description"]');
-        metaDescription.setAttribute('content', blog.description);
-  
-        const metaKeywords = document.querySelector('meta[name="keywords"]');
-        metaKeywords.setAttribute('content', blog.keywords.join(', '));
-  
-        const metaAuthor = document.querySelector('meta[name="author"]');
-        metaAuthor.setAttribute('content', blog.author);
-  
-        const metaOgTitle = document.querySelector('meta[property="og:title"]');
-        metaOgTitle.setAttribute('content', `${blog.title} - Ronin Mom`);
-  
-        const metaOgDescription = document.querySelector('meta[property="og:description"]');
-        metaOgDescription.setAttribute('content', blog.description);
-  
-        const metaOgImage = document.querySelector('meta[property="og:image"]');
-        metaOgImage.setAttribute('content', blog.image);
-  
-        const metaOgUrl = document.querySelector('meta[property="og:url"]');
-        metaOgUrl.setAttribute('content', `https://roninmom.com/pages/blog.html?id=${blog.id}`);
-  
-        const metaOgType = document.querySelector('meta[property="og:type"]');
-        metaOgType.setAttribute('content', 'article');
-  
-        const metaOgSiteName = document.querySelector('meta[property="og:site_name"]');
-        metaOgSiteName.setAttribute('content', 'Ronin Mom');
+    
+        const updateOrCreateMetaTag = (selector, name, content, isProperty = false) => {
+          let metaTag = document.querySelector(selector);
+          if (!metaTag) {
+            metaTag = document.createElement('meta');
+            if (isProperty) {
+              metaTag.setAttribute('property', name);
+            } else {
+              metaTag.setAttribute('name', name);
+            }
+            document.head.appendChild(metaTag);
+          }
+          metaTag.setAttribute('content', content);
+        };
+    
+        updateOrCreateMetaTag('meta[name="description"]', 'description', blog.description);
+        updateOrCreateMetaTag('meta[name="keywords"]', 'keywords', blog.keywords.join(', '));
+        updateOrCreateMetaTag('meta[name="author"]', 'author', blog.author);
+        updateOrCreateMetaTag('meta[property="og:title"]', 'og:title', `${blog.title} - Ronin Mom`, true);
+        updateOrCreateMetaTag('meta[property="og:description"]', 'og:description', blog.description, true);
+        updateOrCreateMetaTag('meta[property="og:image"]', 'og:image', blog.image, true);
+        updateOrCreateMetaTag('meta[property="og:url"]', 'og:url', `https://roninmom.com/pages/blog.html?id=${blog.id}`, true);
+        updateOrCreateMetaTag('meta[property="og:type"]', 'og:type', 'article', true);
+        updateOrCreateMetaTag('meta[property="og:site_name"]', 'og:site_name', 'Ronin Mom', true);
       }
-  
+    
       document.addEventListener('DOMContentLoaded', () => {
         const urlParams = new URLSearchParams(window.location.search);
         const blogId = urlParams.get('id');
-  
+    
         if (blogId) {
           const singleBlogComponent = document.querySelector('single-blog-component');
           singleBlogComponent.style.display = 'block';
           singleBlogComponent.setBlogId(blogId);
-  
+    
           const blogComponent = document.querySelector('blog-component').shadowRoot.querySelector('.blog-container');
           blogComponent.style.display = 'none';
-  
+    
           fetch("https://roninmom.com/data/blog.json")
             .then(response => response.json())
             .then(data => {
@@ -92,6 +89,7 @@
         }
       });
     </script>
+    
       <!-- Google tag (gtag.js) -->
       <script
       async

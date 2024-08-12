@@ -6,15 +6,7 @@ class SingleBlogComponent extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    this.checkUrlForBlogId();
-  }
-
-  checkUrlForBlogId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const blogId = urlParams.get('id');
-    if (blogId) {
-      this.setBlogId(blogId);
-    }
+    this.setupBackButtonHandler();
   }
 
   setBlogId(id) {
@@ -160,6 +152,12 @@ class SingleBlogComponent extends HTMLElement {
     `;
   }
 
+  setupBackButtonHandler() {
+    window.addEventListener('popstate', () => {
+      this.backToBlogList();
+    });
+  }
+
   backToBlogList() {
     const blogComponent = document
       .querySelector("blog-component")
@@ -167,7 +165,6 @@ class SingleBlogComponent extends HTMLElement {
     blogComponent.style.display = "block";
     this.style.display = "none";
     window.scrollTo({ top: 0, behavior: "smooth" });
-    history.pushState(null, "", `blog.html`);
   }
 }
 
