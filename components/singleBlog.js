@@ -164,6 +164,11 @@ class SingleBlogComponent extends HTMLElement {
       .shadowRoot.querySelector(".blog-container");
     blogComponent.style.display = "block";
     this.style.display = "none";
+  
+    // Clear the URL parameters by updating the URL to just "blog.html"
+    history.pushState(null, "", "blog.html");
+  
+    // Scroll to the top of the page
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
