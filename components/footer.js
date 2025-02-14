@@ -61,7 +61,7 @@ class FooterComponent extends HTMLElement {
         <div class="social-links">
           <a href="https://facebook.com" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/facebook.svg" alt="Facebook"></a>
           <a href="https://www.instagram.com/theroninmom?igshid=MjVnczNlZGRrZWll&utm_source=qr" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/instagram.svg" alt="Instagram"></a>
-          <a href="https://www.pinterest.com/theroninmom" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/pinterest.svg" alt="Pinterest"></a>
+          <a href="https://www.pinterest.com/theroninmom" target="_blank"><img src="https://anthonyzaino88.github.io/RoninMomClient/assets/img/pinterest.webp" alt="Pinterest"></a>
 
         </div>
         <div class="copyright">
