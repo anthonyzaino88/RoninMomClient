@@ -1,0 +1,7 @@
+# Robots.txt for roninmom.com
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://roninmom.com/sitemap.xml
+

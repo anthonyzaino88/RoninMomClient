@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://roninmom.com/blog">
+  <title>Redirecting to Blog - Ronin Mom</title>
+  <script>
+    // Handle old blog post URLs with query params like ?id=replacing-paper-towels
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogId = urlParams.get('id');
+    if (blogId) {
+      window.location.replace('https://roninmom.com/blog/' + blogId);
+    } else {
+      window.location.replace('https://roninmom.com/blog');
+    }
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://roninmom.com/blog">
+  </noscript>
+</head>
+<body>
+  <p>This page has moved. <a href="https://roninmom.com/blog">Click here if not redirected.</a></p>
+</body>
+</html>
+

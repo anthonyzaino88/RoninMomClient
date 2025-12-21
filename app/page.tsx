@@ -1,95 +1,93 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import Link from 'next/link'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <div className={styles.heroText}>
+            <h1 className={styles.heroTitle}>The Ronin Mom</h1>
+            <p className={styles.heroSubtitle}>
+              Master life with sustainability and wellness
+            </p>
+            <p className={styles.heroDescription}>
+              Empowering individuals towards self-sufficiency, holistic well-being, 
+              and sustainable living. Discover how embracing the Ronin principles 
+              can transform your life.
+            </p>
+            <div className={styles.heroButtons}>
+              <Link href="/blog" className={styles.primaryButton}>
+                Explore Blog
+              </Link>
+              <Link href="/about" className={styles.secondaryButton}>
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className={styles.heroImage}>
             <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/img/homepage-banner.png"
+              alt="Ronin Mom - Sustainable Living"
+              width={600}
+              height={600}
+              priority
+              className={styles.bannerImage}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* Mission Section */}
+      <section className={styles.mission}>
+        <div className={styles.sectionContent}>
+          <div className={styles.missionIcon}>🌱</div>
+          <h2 className={styles.sectionTitle}>Our Mission</h2>
+          <p className={styles.missionText}>
+            Ronin Mom embarks on a journey to empower individuals towards
+            self-sufficiency, holistic well-being, and sustainable living.
+            We believe in the power of mindful choices and natural living
+            to create a healthier, more balanced life for you and your family.
+          </p>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className={styles.features}>
+        <div className={styles.featuresGrid}>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>🏡</div>
+            <h3>Self-Sufficiency</h3>
+            <p>Learn practical skills for independent, sustainable living</p>
+          </div>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>🧘</div>
+            <h3>Holistic Wellness</h3>
+            <p>Integrate mind, body, and spirit for complete well-being</p>
+          </div>
+          <div className={styles.featureCard}>
+            <div className={styles.featureIcon}>♻️</div>
+            <h3>Sustainability</h3>
+            <p>Make eco-friendly choices that benefit you and the planet</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.cta}>
+        <div className={styles.ctaContent}>
+          <h2 className={styles.ctaTitle}>Join Our Community</h2>
+          <p className={styles.ctaText}>
+            Become a part of the movement towards a healthier, self-sufficient
+            lifestyle. Get inspired by our stories and tips.
+          </p>
+          <Link href="/signup" className={styles.ctaButton}>
+            Sign Up Now
+          </Link>
+        </div>
+      </section>
+    </>
+  )
 }
