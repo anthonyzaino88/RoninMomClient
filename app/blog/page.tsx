@@ -1,7 +1,6 @@
 import { allPosts } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
-import Link from 'next/link'
-import Image from 'next/image'
+import BlogClient from './BlogClient'
 import styles from './blog.module.css'
 
 export const metadata = {
@@ -14,6 +13,21 @@ export default function BlogPage() {
     compareDesc(new Date(a.date), new Date(b.date))
   )
 
+  // Get unique categories
+  const categories = [...new Set(posts.map(post => post.category))]
+
+  // Serialize posts for client component
+  const serializedPosts = posts.map(post => ({
+    _id: post._id,
+    title: post.title,
+    description: post.description,
+    date: post.date,
+    category: post.category,
+    tags: post.tags,
+    image: post.image,
+    url: post.url,
+  }))
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -23,52 +37,7 @@ export default function BlogPage() {
         </p>
       </header>
 
-      <div className={styles.grid}>
-        {posts.map((post) => (
-          <article key={post._id} className={styles.card}>
-            <Link href={post.url} className={styles.cardLink}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className={styles.image}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
-              <div className={styles.content}>
-                <div className={styles.meta}>
-                  <span className={styles.category}>{post.category}</span>
-                  <time className={styles.date}>
-                    {new Date(post.date).toLocaleDateString('en-US', {
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric'
-                    })}
-                  </time>
-                </div>
-                <h2 className={styles.cardTitle}>{post.title}</h2>
-                <p className={styles.description}>{post.description}</p>
-                <div className={styles.tags}>
-                  {post.tags.map((tag: string) => (
-                    <span key={tag} className={styles.tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className={styles.readMore}>Read More →</div>
-              </div>
-            </Link>
-          </article>
-        ))}
-      </div>
-
-      {posts.length === 0 && (
-        <div className={styles.empty}>
-          <p>No blog posts yet. Check back soon!</p>
-        </div>
-      )}
+      <BlogClient posts={serializedPosts} categories={categories} />
     </div>
   )
 }
-
