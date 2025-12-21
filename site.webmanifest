@@ -1,0 +1,17 @@
+{
+    "name": "Ronin Mom",
+    "short_name": "Ronin Mom",
+    "description": "Empowering self-sufficient, holistic, and sustainable living",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#f4f1ea",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
+}
