@@ -108,16 +108,17 @@
 }
 
 .imageWrapper {
-  margin: 3rem 0;
+  position: relative;
+  margin: 2rem 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  width: 100%;
 }
 
 .featuredImage {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
 }
 
 .content {

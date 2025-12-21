@@ -137,9 +137,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <Image
             src={post.image}
             alt={post.title}
-            width={1200}
-            height={630}
+            fill
             className={styles.featuredImage}
+            sizes="(max-width: 768px) 100vw, 900px"
             priority
           />
         </div>
