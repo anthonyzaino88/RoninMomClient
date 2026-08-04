@@ -19,12 +19,23 @@
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.4vw, 1.7rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--ink);
   text-decoration: none;
+  line-height: 1;
+}
+
+.mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .logo:hover {
@@ -62,6 +73,15 @@
 @media (max-width: 520px) {
   .nav {
     padding-inline: 1rem;
+  }
+
+  .logo {
+    gap: 0.45rem;
+  }
+
+  .mark {
+    width: 30px;
+    height: 30px;
   }
 
   .links {

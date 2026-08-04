@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { FaInstagram, FaPinterest } from 'react-icons/fa'
 import styles from './Footer.module.css'
@@ -9,7 +10,17 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brandBlock}>
-          <p className={styles.brand}>Ronin Mom</p>
+          <p className={styles.brand}>
+            <Image
+              src="/images/brand/roninmom-mark-master.png"
+              alt=""
+              aria-hidden="true"
+              width={32}
+              height={32}
+              className={styles.mark}
+            />
+            <span>Ronin Mom</span>
+          </p>
           <p className={styles.tagline}>
             Raising a capable family. Creating a more intentional home.
           </p>
