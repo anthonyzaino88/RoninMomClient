@@ -1,28 +1,55 @@
 import type { Metadata } from "next";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import "./globals.css";
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
+
+const siteDescription =
+  "Ronin Mom shares honest family experiences and practical ways to homeschool, simplify your home, live more naturally, and become more self-sufficient—without chasing perfection.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://roninmom.com"),
-  title: "The Ronin Mom - Empowering Self-Sufficient Living",
-  description: "Ronin Mom empowers self-sufficient living with holistic wellness and sustainability tips. Join us for practical, eco-friendly insights.",
-  keywords: ["Ronin Mom", "self-sufficient living", "holistic lifestyle", "sustainable living", "independence", "well-being"],
+  title: {
+    default: "Ronin Mom — Raising a capable family",
+    template: "%s · Ronin Mom",
+  },
+  description: siteDescription,
+  keywords: [
+    "Ronin Mom",
+    "homeschooling",
+    "intentional family life",
+    "low-toxin home",
+    "self-sufficient living",
+    "practical home skills",
+  ],
   authors: [{ name: "Ronin Mom" }],
   alternates: {
     canonical: "https://roninmom.com",
   },
   openGraph: {
-    title: "Ronin Mom - Self-Sufficient & Sustainable Living",
-    description: "Ronin Mom is your go-to resource for sustainability, holistic wellness, and independent living. Learn how to embrace a self-sufficient lifestyle today!",
+    title: "Ronin Mom — Raising a capable family",
+    description: siteDescription,
     url: "https://roninmom.com",
     siteName: "Ronin Mom",
     images: [
       {
-        url: "/assets/img/banner.png",
-        width: 1200,
-        height: 630,
+        url: "/images/brand/roninmom-home-hero.webp",
+        width: 1536,
+        height: 1024,
+        alt: "Illustration of a mother and four children learning, cooking, and making things together around a kitchen table.",
       },
     ],
     locale: "en_US",
@@ -30,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ronin Mom - Self-Sufficient & Sustainable Living",
-    description: "Ronin Mom is your go-to resource for sustainability, holistic wellness, and independent living.",
-    images: ["/assets/img/banner.png"],
+    title: "Ronin Mom — Raising a capable family",
+    description: siteDescription,
+    images: ["/images/brand/roninmom-home-hero.webp"],
   },
   robots: {
     index: true,
@@ -40,7 +67,7 @@ export const metadata: Metadata = {
   },
   verification: {
     other: {
-      'p:domain_verify': ['548fc0782a6a69377b64db0069d2a28d'],
+      "p:domain_verify": ["548fc0782a6a69377b64db0069d2a28d"],
     },
   },
 };
@@ -48,42 +75,30 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Ronin Mom",
-  "url": "https://roninmom.com",
-  "logo": "https://roninmom.com/assets/img/banner.png",
-  "description": "Ronin Mom empowers individuals through self-sufficient, holistic, and sustainable living practices. Join our community to master life with sustainability and wellness.",
-  "sameAs": [
+  name: "Ronin Mom",
+  url: "https://roninmom.com",
+  description: siteDescription,
+  sameAs: [
     "https://www.instagram.com/theroninmom",
-    "https://www.pinterest.com/theroninmom"
+    "https://www.pinterest.com/theroninmom",
   ],
-  "contactPoint": {
+  contactPoint: {
     "@type": "ContactPoint",
-    "email": "contact@roninmom.com",
-    "contactType": "Customer Support"
-  }
+    email: "contact@roninmom.com",
+    contactType: "editorial",
+  },
 };
 
-const faqSchema = {
+const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Ronin Mom?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ronin Mom is a platform focused on self-sufficient, sustainable, and holistic living. We provide insights, guides, and resources to help individuals live independently."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I live sustainably?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Living sustainably means reducing waste, using eco-friendly products, and adopting self-sufficient habits. Ronin Mom offers practical guides to help you make the switch."
-      }
-    }
-  ]
+  "@type": "WebSite",
+  name: "Ronin Mom",
+  url: "https://roninmom.com",
+  description: siteDescription,
+  publisher: {
+    "@type": "Organization",
+    name: "Ronin Mom",
+  },
 };
 
 export default function RootLayout({
@@ -92,33 +107,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${fraunces.variable} ${sourceSans.variable}`}>
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/hji1dmf.css" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#315744" />
+        <meta name="msapplication-TileColor" content="#315744" />
+        <meta name="theme-color" content="#fcfaf6" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body style={{ width: '100%', overflowX: 'hidden' }}>
+      <body>
         <Navbar />
-        <main style={{ width: '100%', overflowX: 'hidden' }}>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
-        
-        {/* Google Analytics */}
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ER6VM479RR"
           strategy="afterInteractive"

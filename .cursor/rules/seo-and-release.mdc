@@ -1,0 +1,11 @@
+---
+description: Apply when changing routes, metadata, structured data, sitemap, robots, internal links, article templates, performance, or preparing a Ronin Mom handoff or release.
+alwaysApply: false
+---
+
+- Use `@.cursor/skills/roninmom-seo-audit/SKILL.md` for search-facing changes.
+- Use `@.cursor/skills/release-check/SKILL.md` before handoff or release.
+- Verify rendered output; source inspection alone is insufficient.
+- Emit structured data only when visible content supports every material property.
+- Separate new regressions, existing warnings, optional improvements, and environment failures.
+- Do not commit, push, merge, or deploy without a separate explicit request.

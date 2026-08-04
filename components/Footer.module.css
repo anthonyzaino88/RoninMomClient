@@ -1,73 +1,74 @@
 .footer {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  padding: 3rem 5% 2rem;
-  text-align: center;
-  color: white;
-  margin-top: auto;
-  border-top: 4px solid var(--accent-color);
+  margin-top: var(--space-2xl);
+  background: var(--ink);
+  color: rgba(252, 250, 246, 0.88);
+}
+
+.inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-xl) 1.25rem var(--space-md);
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1.4fr 1fr auto;
+  align-items: start;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem;
+  color: var(--canvas);
+}
+
+.tagline {
+  margin: 0;
+  max-width: 24rem;
+  color: rgba(252, 250, 246, 0.72);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.nav a,
+.socialLinks a {
+  color: rgba(252, 250, 246, 0.86);
+  text-decoration: none;
+}
+
+.nav a:hover,
+.socialLinks a:hover {
+  color: #f0d89a;
 }
 
 .socialLinks {
-  margin: 1.5rem 0;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.socialLinks a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  color: white;
-  font-size: 24px;
-}
-
-.socialLinks a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.socialLinks a svg {
-  width: 24px;
-  height: 24px;
+  gap: 0.9rem;
+  font-size: 1.35rem;
 }
 
 .copyright {
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  opacity: 0.9;
-  font-weight: 400;
-  letter-spacing: 0.3px;
+  border-top: 1px solid rgba(252, 250, 246, 0.12);
+  padding: 1rem 1.25rem 1.35rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(252, 250, 246, 0.55);
 }
 
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 1.5rem 1.5rem;
+@media (max-width: 800px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
   }
-  
-  .socialLinks {
-    gap: 1rem;
-  }
-  
-  .socialLinks a {
-    width: 42px;
-    height: 42px;
-  }
-  
-  .socialLinks img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .copyright {
-    font-size: 0.85rem;
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.25rem;
   }
 }

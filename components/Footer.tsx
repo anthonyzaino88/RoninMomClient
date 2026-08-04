@@ -1,39 +1,49 @@
+import Link from 'next/link'
+import { FaInstagram, FaPinterest } from 'react-icons/fa'
 import styles from './Footer.module.css'
-import { FaFacebook, FaInstagram, FaPinterest } from 'react-icons/fa'
 
 export default function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer className={styles.footer}>
-      <div className={styles.socialLinks}>
-        <a 
-          href="https://facebook.com" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          aria-label="Visit our Facebook page"
-        >
-          <FaFacebook />
-        </a>
-        <a 
-          href="https://www.instagram.com/theroninmom?igshid=MjVnczNlZGRrZWll&utm_source=qr" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          aria-label="Follow us on Instagram"
-        >
-          <FaInstagram />
-        </a>
-        <a 
-          href="https://www.pinterest.com/theroninmom" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          aria-label="Follow us on Pinterest"
-        >
-          <FaPinterest />
-        </a>
+      <div className={styles.inner}>
+        <div className={styles.brandBlock}>
+          <p className={styles.brand}>Ronin Mom</p>
+          <p className={styles.tagline}>
+            Raising a capable family. Creating a more intentional home.
+          </p>
+        </div>
+
+        <nav className={styles.nav} aria-label="Footer">
+          <Link href="/blog">Journal</Link>
+          <Link href="/about">About</Link>
+          <Link href="/signup">Join</Link>
+          <Link href="/shop">Shop</Link>
+        </nav>
+
+        <div className={styles.socialLinks}>
+          <a
+            href="https://www.instagram.com/theroninmom"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Ronin Mom on Instagram"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.pinterest.com/theroninmom"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow Ronin Mom on Pinterest"
+          >
+            <FaPinterest />
+          </a>
+        </div>
       </div>
       <div className={styles.copyright}>
-        &copy; 2024 Ronin Mom. All rights reserved.
+        © {year} Ronin Mom. All rights reserved.
       </div>
     </footer>
   )
 }
-

@@ -1,0 +1,15 @@
+---
+description: Apply when adding, editing, migrating, categorizing, or displaying Ronin Mom articles, MDX, frontmatter, author data, article imagery, or editorial components.
+alwaysApply: false
+---
+
+- Read `@.cursor/skills/roninmom-content-feature/SKILL.md` before content work.
+- Read `@.cursor/skills/roninmom-blog-authoring/SKILL.md` before researching, outlining, drafting, or substantively revising an article.
+- Read `@.cursor/skills/editorial-experience-design/SKILL.md` before designing or implementing article, category, homepage, or newsletter presentation.
+- Inspect the real schema and loading utilities before editing frontmatter.
+- Preserve published slugs unless the task includes a redirect plan.
+- Classify legacy articles before migrating, featuring, or materially revising them; do not carry forward unsupported claims merely to preserve copy.
+- Use personal experience only when it is true, relevant, and useful to the reader.
+- Never fabricate expertise, testing, quotes, claims, dates, or family details.
+- Treat child, health, remedy, food, low-toxin, cleaning, disinfecting, and safety content as trust-sensitive.
+- Run the read-only `blog-editor` after a full draft or substantive revision; resolve blocking findings before publishing.

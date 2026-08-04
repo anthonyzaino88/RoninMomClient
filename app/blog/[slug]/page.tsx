@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
-import Script from 'next/script'
+import { absoluteImageUrl, getRelatedPosts } from '@/lib/content'
+import { brandImages, coverAlt, hasCoverImage } from '@/lib/images'
 import styles from './post.module.css'
 
 export async function generateStaticParams() {
@@ -13,16 +14,21 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((post) => post.slug === params.slug)
-  
+  const post = allPosts.find((entry) => entry.slug === params.slug)
+
   if (!post) {
     return {
       title: 'Post Not Found',
     }
   }
 
+  const image = absoluteImageUrl(post.image) || brandImages.homeHero.src
+  const imageAlt = hasCoverImage(post.image)
+    ? coverAlt(post.slug, post.title)
+    : brandImages.homeHero.alt
+
   return {
-    title: `${post.title} - Ronin Mom`,
+    title: post.title,
     description: post.description,
     keywords: post.tags,
     authors: [{ name: post.author }],
@@ -38,8 +44,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: `https://roninmom.com${post.url}`,
       images: [
         {
-          url: `https://roninmom.com${post.image}`,
-          alt: post.title,
+          url: image,
+          alt: imageAlt,
         },
       ],
     },
@@ -47,19 +53,19 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: [`https://roninmom.com${post.image}`],
+      images: [image],
     },
   }
 }
 
-// Generate JSON-LD structured data for blog posts
-function generateJsonLd(post: typeof allPosts[0]) {
+function generateJsonLd(post: (typeof allPosts)[0]) {
+  const image = absoluteImageUrl(post.image)
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.description,
-    image: `https://roninmom.com${post.image}`,
+    ...(image ? { image } : {}),
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -69,10 +75,7 @@ function generateJsonLd(post: typeof allPosts[0]) {
     publisher: {
       '@type': 'Organization',
       name: 'Ronin Mom',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://roninmom.com/assets/img/banner.png',
-      },
+      url: 'https://roninmom.com',
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
@@ -83,7 +86,7 @@ function generateJsonLd(post: typeof allPosts[0]) {
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = allPosts.find((post) => post.slug === params.slug)
+  const post = allPosts.find((entry) => entry.slug === params.slug)
 
   if (!post) {
     notFound()
@@ -91,6 +94,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   const MDXContent = useMDXComponent(post.body.code)
   const jsonLd = generateJsonLd(post)
+  const related = getRelatedPosts(post, 2)
+  const showCover = hasCoverImage(post.image)
 
   return (
     <>
@@ -100,93 +105,97 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       />
       <article className={styles.article}>
         <div className={styles.container}>
-          <Link href="/blog" className={styles.backLink}>
-            ← Back to Blog
-          </Link>
+          <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+            <Link href="/blog">Journal</Link>
+            <span aria-hidden="true">/</span>
+            <span>{post.category}</span>
+          </nav>
 
-        <header className={styles.header}>
-          <div className={styles.meta}>
-            <span className={styles.category}>{post.category}</span>
-            <time className={styles.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
-            </time>
-          </div>
-          
-          <h1 className={styles.title}>{post.title}</h1>
-          
-          <p className={styles.description}>{post.description}</p>
-          
-          <div className={styles.author}>
-            <span>By {post.author}</span>
-          </div>
-
-          <div className={styles.tags}>
-            {post.tags.map((tag: string) => (
-              <span key={tag} className={styles.tag}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        </header>
-
-        <div className={styles.imageWrapper}>
-          <Image
-            src={post.image}
-            alt={post.title}
-            fill
-            className={styles.featuredImage}
-            sizes="(max-width: 768px) 100vw, 900px"
-            priority
-          />
-        </div>
-
-        <div className={styles.content}>
-          <MDXContent />
-        </div>
-
-        <footer className={styles.footer}>
-          <div className={styles.shareSection}>
-            <h3>Share this article</h3>
-            <div className={styles.shareButtons}>
-              <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://roninmom.com${post.url}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.shareButton}
-              >
-                Twitter
-              </a>
-              <a
-                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://roninmom.com${post.url}`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.shareButton}
-              >
-                Facebook
-              </a>
-              <a
-                href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(`https://roninmom.com${post.url}`)}&description=${encodeURIComponent(post.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.shareButton}
-              >
-                Pinterest
-              </a>
+          <header className={styles.header}>
+            <div className={styles.meta}>
+              <span className={styles.category}>{post.category}</span>
+              <time className={styles.date} dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </time>
             </div>
+
+            <h1 className={styles.title}>{post.title}</h1>
+            <p className={styles.description}>{post.description}</p>
+            <p className={styles.author}>By {post.author}</p>
+          </header>
+
+          {showCover && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={post.image!}
+                alt={coverAlt(post.slug, post.title)}
+                fill
+                className={styles.featuredImage}
+                sizes="(max-width: 768px) 100vw, 760px"
+                priority
+              />
+            </div>
+          )}
+
+          <div className={styles.content}>
+            <MDXContent />
           </div>
-          
-          <Link href="/blog" className={styles.backToAllPosts}>
-            ← View All Posts
-          </Link>
-        </footer>
-      </div>
-    </article>
+
+          {related.length > 0 && (
+            <aside className={styles.related} aria-labelledby="related-title">
+              <h2 id="related-title">Keep reading</h2>
+              <ul>
+                {related.map((entry) => (
+                  <li key={entry._id}>
+                    <Link href={entry.url}>{entry.title}</Link>
+                    <p>{entry.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
+          <footer className={styles.footer}>
+            <div className={styles.shareSection}>
+              <h2>Share</h2>
+              <div className={styles.shareButtons}>
+                <a
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://roninmom.com${post.url}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.shareButton}
+                >
+                  Twitter
+                </a>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`https://roninmom.com${post.url}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.shareButton}
+                >
+                  Facebook
+                </a>
+                <a
+                  href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(`https://roninmom.com${post.url}`)}&description=${encodeURIComponent(post.title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.shareButton}
+                >
+                  Pinterest
+                </a>
+              </div>
+            </div>
+
+            <Link href="/blog" className={styles.backToAllPosts}>
+              Back to the journal
+            </Link>
+          </footer>
+        </div>
+      </article>
     </>
   )
 }
-
-
