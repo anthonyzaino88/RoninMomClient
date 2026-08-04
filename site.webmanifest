@@ -4,8 +4,13 @@
     "description": "Empowering self-sufficient, holistic, and sustainable living",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png",
+            "src": "/icon-192.png",
             "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
