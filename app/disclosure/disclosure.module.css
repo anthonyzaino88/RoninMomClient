@@ -1,0 +1,58 @@
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3.5rem) 1.25rem var(--space-xl);
+}
+
+.header h1 {
+  max-width: 20ch;
+}
+
+.lede {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 40rem;
+}
+
+.section,
+.cta {
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section p,
+.cta p,
+.section li {
+  color: var(--muted);
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.section li {
+  margin-bottom: 0.65rem;
+}
+
+.section strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.1rem;
+  margin-top: 0.35rem;
+  font-weight: 650;
+  text-decoration: none;
+  background: var(--forest);
+  color: var(--canvas);
+}
+
+.primary:hover {
+  background: #274536;
+  color: var(--canvas);
+}

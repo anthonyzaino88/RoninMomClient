@@ -2,6 +2,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import styles from './shop.module.css'
 
+// Noindex placeholder. Restore /shop in app/sitemap.ts when the curated shop
+// launches with substantive, indexable content.
 export const metadata: Metadata = {
   title: 'Shop',
   description:

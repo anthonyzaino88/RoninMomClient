@@ -1,0 +1,57 @@
+# Content-commerce foundation
+
+Static-export compatible product recommendations. No live affiliate products
+are registered yet.
+
+## Product model
+
+`lib/commerce/products.ts` is the registry. Article code should look up a
+stable product ID rather than embedding merchant URLs.
+
+Rendering (`ProductLink`) only outputs products with `status: "approved"`.
+Draft and retired records stay in the registry but render nothing.
+
+## Evidence levels
+
+| Level | Meaning | Public copy may say |
+| --- | --- | --- |
+| `personally-used` | Confirmed ordinary household use | That Ronin Mom used it, if that is true |
+| `directly-compared` | A real comparison for a stated purpose | How the options differed in that comparison |
+| `researched` | Public information only | What the sources support; not “we tested” |
+
+Gifted products and paid sponsorships are separate disclosures, not evidence
+levels. Do not file a gifted item as `personally-used`.
+
+Appearing in the registry is not evidence of use, testing, or an affiliate
+relationship. `isAffiliate` is true only when a program is actually approved
+and configured.
+
+## Affiliate links
+
+- Destination is the merchant URL. No cloaked `/go/` redirects.
+- Affiliate: `rel="sponsored nofollow"` (plus `noopener` if the link opens in a new tab).
+- Non-affiliate editorial links do not get `sponsored`.
+- The visible link shows the merchant plus an evidence label (`Researched`,
+  `Compared`, or `Household use`) so appearance alone cannot imply personal use.
+  Affiliate links also show “Affiliate link.”
+- Pages that include affiliate links must show `AffiliateDisclosure` in the
+  readable content, before the first recommendation, and link here from
+  `/disclosure`.
+
+## Analytics
+
+Approved affiliate clicks send GA4 `affiliate_click` with `item_id`,
+`merchant`, `placement`, and `page_path`. Ordinary editorial links do not.
+If `gtag` is missing, navigation still proceeds.
+
+## Sitemap and `/shop`
+
+`/shop` is a noindex placeholder and is omitted from `app/sitemap.ts`. Restore
+`/shop` to the generated sitemap when the curated shop launches with
+substantive, indexable content.
+
+## Out of scope until a dedicated review
+
+Do not attach product recommendations to `/blog/diy-disinfectant-spray`,
+health or wellness articles, or cleaning/disinfecting guidance without a
+separate editorial and evidence review.

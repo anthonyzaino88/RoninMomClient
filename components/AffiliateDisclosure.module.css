@@ -1,0 +1,22 @@
+.note {
+  margin: 0 0 var(--space-md);
+  padding: 0.85rem 1rem 0.85rem 1.05rem;
+  border-left: 2px solid var(--olive);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.note p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.note a {
+  font-weight: 650;
+  color: var(--forest);
+}
+
+.note a:hover {
+  color: #274536;
+}
