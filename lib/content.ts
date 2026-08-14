@@ -2,7 +2,21 @@ import { allPosts, type Post } from 'contentlayer/generated'
 import { compareDesc } from 'date-fns'
 
 /** Published posts that must not be featured or recommended until corrected. */
-export const HOLD_SLUGS = new Set(['diy-disinfectant-spray'])
+export const HOLD_SLUGS = new Set<string>()
+
+/** Editorial last-updated date: meaningful modification, else original publication. */
+export function getPostModifiedDate(post: Pick<Post, 'date' | 'modified'>): string {
+  return post.modified || post.date
+}
+
+export function formatPostDate(value: string): string {
+  return new Date(value).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: 'UTC',
+  })
+}
 
 export function isFeatureable(slug: string): boolean {
   return !HOLD_SLUGS.has(slug)

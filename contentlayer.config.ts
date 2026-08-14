@@ -17,6 +17,10 @@ export const Post = defineDocumentType(() => ({
       type: 'date',
       required: true,
     },
+    modified: {
+      type: 'date',
+      required: false,
+    },
     author: {
       type: 'string',
       default: 'Ronin Mom',
