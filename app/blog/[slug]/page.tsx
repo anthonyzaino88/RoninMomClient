@@ -125,7 +125,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               </time>
               {post.modified ? (
                 <time className={styles.date} dateTime={post.modified}>
-                  Updated {formatPostDate(post.modified)}
+                  {`Updated ${formatPostDate(post.modified)}`}
                 </time>
               ) : null}
             </div>
