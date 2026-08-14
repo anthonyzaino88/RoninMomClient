@@ -3,7 +3,12 @@ import { notFound } from 'next/navigation'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
-import { absoluteImageUrl, getRelatedPosts } from '@/lib/content'
+import {
+  absoluteImageUrl,
+  formatPostDate,
+  getPostModifiedDate,
+  getRelatedPosts,
+} from '@/lib/content'
 import { brandImages, coverAlt, hasCoverImage } from '@/lib/images'
 import styles from './post.module.css'
 
@@ -40,6 +45,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: post.description,
       type: 'article',
       publishedTime: post.date,
+      ...(post.modified ? { modifiedTime: post.modified } : {}),
       authors: [post.author],
       url: `https://roninmom.com${post.url}`,
       images: [
@@ -67,7 +73,7 @@ function generateJsonLd(post: (typeof allPosts)[0]) {
     description: post.description,
     ...(image ? { image } : {}),
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: getPostModifiedDate(post),
     author: {
       '@type': 'Person',
       name: post.author,
@@ -115,12 +121,13 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             <div className={styles.meta}>
               <span className={styles.category}>{post.category}</span>
               <time className={styles.date} dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
+                {formatPostDate(post.date)}
               </time>
+              {post.modified ? (
+                <time className={styles.date} dateTime={post.modified}>
+                  Updated {formatPostDate(post.modified)}
+                </time>
+              ) : null}
             </div>
 
             <h1 className={styles.title}>{post.title}</h1>
