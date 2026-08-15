@@ -65,13 +65,88 @@ export type ProductRecommendation = {
 }
 
 /**
- * Public catalog. Empty until real, reviewed products exist.
+ * Public catalog. Only approved, reviewed records belong here.
  *
  * Import this module only from Server Components or other build-time code.
  * Client Components must not import it — the full registry, including draft,
  * retired, and `note` fields, would then ship in the browser bundle.
+ *
+ * The first cluster uses researched, non-affiliate entryway products only.
+ * Held and rejected candidates stay in docs/commerce/entryway-product-evidence.md.
  */
-export const products: readonly ProductRecommendation[] = []
+export const products: readonly ProductRecommendation[] = [
+  {
+    id: 'llbean-washable-waterhog-doormat',
+    name: 'Washable Waterhog Doormat, Honeycomb',
+    merchant: 'L.L.Bean',
+    url: 'https://www.llbean.com/llb/shop/126800',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'shoe-free-home-with-kids',
+      'entryway-mat-boot-tray-system',
+    ],
+    note: 'Official L.L.Bean page checked 2026-08-15. Indoor/outdoor mat; 3/8 in door clearance; raised border; small and medium sizes are machine-washable. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-baggmuck-shoe-tray-28',
+    name: 'BAGGMUCK shoe tray, indoor/outdoor/gray, 28x14"',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/baggmuck-shoe-tray-indoor-outdoor-gray-60329711/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'shoe-free-home-with-kids',
+      'entryway-mat-boot-tray-system',
+      'small-entryway-shoe-storage',
+    ],
+    note: 'Official IKEA US page, article 603.297.11, checked 2026-08-15. Polypropylene tray with a raised edge; wipe-clean. Manufacturer notes it can slide. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-mackapar-shoe-rack',
+    name: 'MACKAPÄR shoe rack, white, 30 3/4x12 5/8x15 3/4"',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/mackapaer-shoe-rack-white-50530993/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: ['small-entryway-shoe-storage', 'shoe-free-home-with-kids'],
+    note: 'Official IKEA US page, article 505.309.93, checked 2026-08-15. Open steel rack; holds about 6 pairs; indoor only; stackable if both units are wall-anchored. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-mackapar-shoe-cabinet',
+    name: 'MACKAPÄR shoe/storage cabinet, white, 31 1/2x13 3/4x40 1/8"',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/mackapaer-shoe-storage-cabinet-white-50334751/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: ['small-entryway-shoe-storage'],
+    note: 'Official IKEA US page, article 503.347.51, checked 2026-08-15. Closed cabinet with sliding doors; about 16 pairs; tipping-hazard warning requires wall anchoring. Larger shoes may need angled shelves. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-nipasen-bench',
+    name: 'NIPÅSEN bench with shoe storage, black, 31 1/8x13 3/4x20 1/2"',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/nipasen-bench-with-shoe-storage-black-20586142/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'small-entryway-shoe-storage',
+      'shoe-free-home-guests-accessibility',
+      'shoe-free-home-with-kids',
+    ],
+    note: 'Official IKEA US page, article 205.861.42, checked 2026-08-15. Bench plus open shelf; about 4 pairs on the shelf; tested to 220.5 lb; pairs with the 28x14 BAGGMUCK tray. Not a medical seating product. Not household-tested. No affiliate parameters.',
+  },
+]
 
 /** Approved fields allowed to cross the server/client boundary. */
 export type PublicProductLink = Pick<

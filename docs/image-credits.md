@@ -13,7 +13,7 @@ Internal record for editorial transparency. Attribution is optional under the no
 
 | File / URL | Article slug | Photographer / source | License notes |
 | --- | --- | --- | --- |
-| `public/images/posts/shoe-free-entryway.png` | `shoe-free-home-with-kids` | Existing Ronin Mom site asset | Site photography already in repo |
+| `public/images/posts/shoe-free-entryway.png` | `shoe-free-home-with-kids` | Existing Ronin Mom site asset | Site photography already in repo; not reused on the 2026 supporting entryway articles |
 | `public/images/posts/low-tox-starter-kit.png` | `low-tox-starter-kit` | Existing Ronin Mom site asset | Site photography already in repo; not for About or brand identity |
 | `public/images/posts/organic-cotton-dish-cloths.webp` | `organic-cotton-dish-cloths` | Existing Ronin Mom site asset | Product/cloth photo already in repo |
 | `public/images/posts/self-sufficient-family-gardening.jpg` | `self-sufficient-living` | Pexels photo [4894603](https://www.pexels.com/photo/father-and-daughter-gardening-4894603/) | [Pexels license](https://www.pexels.com/license/) |
@@ -21,6 +21,9 @@ Internal record for editorial transparency. Attribution is optional under the no
 | `public/images/posts/glass-food-storage-kitchen-shelf.jpg` | `glass-bottles-sustainable-living` | Luisa Brimble via [Unsplash](https://unsplash.com/photos/assorted-glass-jars-on-white-wooden-shelf-i-GPyFK_SJg) | [Unsplash license](https://unsplash.com/license/) |
 | Amazon product image URL | `silicone-bags-zero-waste` | Product listing image (existing) | Kept only because it depicts the reviewed product type |
 | _(none)_ | `diy-disinfectant-spray` | — | Hold article: no new cover until claims are corrected |
+| _(none)_ | `small-entryway-shoe-storage` | — | No cover: avoid merchant product images and reuse of the pillar photo |
+| _(none)_ | `entryway-mat-boot-tray-system` | — | No cover: avoid merchant product images and reuse of the pillar photo |
+| _(none)_ | `shoe-free-home-guests-accessibility` | — | No cover: avoid merchant product images and reuse of the pillar photo |
 
 ## Usage rules
 

@@ -1,8 +1,9 @@
 import { allPosts } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { getMDXComponent } from 'next-contentlayer/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
+import { mdxComponents } from '@/components/mdx-components'
 import {
   absoluteImageUrl,
   formatPostDate,
@@ -98,7 +99,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     notFound()
   }
 
-  const MDXContent = useMDXComponent(post.body.code)
+  const MDXContent = getMDXComponent(post.body.code)
   const jsonLd = generateJsonLd(post)
   const related = getRelatedPosts(post, 2)
   const showCover = hasCoverImage(post.image)
@@ -149,7 +150,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           )}
 
           <div className={styles.content}>
-            <MDXContent />
+            <MDXContent components={mdxComponents} />
           </div>
 
           {related.length > 0 && (

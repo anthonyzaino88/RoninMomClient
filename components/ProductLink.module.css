@@ -3,10 +3,12 @@
   font-weight: 650;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+  overflow-wrap: anywhere;
 }
 
-.link:hover {
-  color: var(--clay);
+.link:hover,
+.link:focus-visible {
+  color: #274536;
 }
 
 .merchant,
