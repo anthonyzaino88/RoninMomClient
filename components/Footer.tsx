@@ -31,6 +31,7 @@ export default function Footer() {
           <Link href="/about">About</Link>
           <Link href="/signup">Join</Link>
           <Link href="/shop">Shop</Link>
+          <Link href="/disclosure">Disclosure</Link>
         </nav>
 
         <div className={styles.socialLinks}>

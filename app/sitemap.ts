@@ -4,7 +4,9 @@ import { getPostModifiedDate } from '@/lib/content'
 
 const SITE_URL = 'https://roninmom.com'
 
-const STATIC_ROUTES = ['/', '/about', '/blog', '/shop', '/signup'] as const
+// /shop is a noindex placeholder with no substantive commerce content.
+// Restore it to this list when the curated shop launches and becomes indexable.
+const STATIC_ROUTES = ['/', '/about', '/blog', '/signup', '/disclosure'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((path) => ({
