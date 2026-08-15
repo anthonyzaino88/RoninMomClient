@@ -103,7 +103,7 @@ export const products: readonly ProductRecommendation[] = [
       'shoe-free-home-with-kids',
       'entryway-mat-boot-tray-system',
     ],
-    note: 'Official IKEA US page, article 603.297.11, checked 2026-08-15. Polypropylene tray with a raised edge; wipe-clean. Manufacturer notes it can slide. Not household-tested. No affiliate parameters.',
+    note: 'Official IKEA US page, article 603.297.11, checked 2026-08-15. Polypropylene tray with a raised edge; wipe-clean. The official page does not identify it as a standing or nonslip surface. Not household-tested. No affiliate parameters.',
   },
   {
     id: 'ikea-mackapar-shoe-rack',

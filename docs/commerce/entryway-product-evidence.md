@@ -90,9 +90,9 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 - **Materials:** polypropylene plastic (min. 20% recycled)
 - **Care:** wipe with a damp cloth and mild cleaner; wipe dry
 - **Assembly:** none
-- **Main drawback:** a lightweight tray can slide or tip when someone steps on it while putting shoes on or off
-- **Who should skip it:** anyone who needs a stable standing surface, or an entry that cannot spare a 14" depth
-- **Accessibility:** do not treat the tray as a step or standing platform
+- **Main drawback:** the official page does not identify the tray as a standing or nonslip surface
+- **Who should skip it:** anyone who needs a standing or nonslip surface, or an entry that cannot spare a 14" depth
+- **Accessibility:** keep it outside the standing path and verify that its placement is stable on the floor
 - **Small-space:** IKEA also lists an 18x14" size; the 28" tray needs a clear rectangle by the door
 - **Image rights:** merchant photos not used
 - **Related slugs:** `shoe-free-home-with-kids`, `entryway-mat-boot-tray-system`, `small-entryway-shoe-storage`
@@ -101,9 +101,11 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 
 - IKEA describes a high edge that keeps dirt and water on the tray, and wipe-clean care.
 - IKEA says the tray can sit under racks or cabinets and be pulled out to clean.
+- The official page does not identify the tray as a standing or nonslip surface.
 
 **Not established**
 
+- That the tray slides or tips (that claim appeared only in a customer review)
 - Pair capacity as a tested household result
 - That the tray disinfects shoes or replaces floor cleaning
 - Ownership or preference
@@ -193,7 +195,7 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 - **Materials:** powder-coated steel frame and stretched-metal shelf; fiberboard seat
 - **Assembly:** required
 - **Care:** damp cloth and mild cleaner; wipe dry
-- **Main drawback:** low pair count; stretched-metal shelf lets dirt fall through; the seat is a thin fiberboard panel, not a padded mobility aid
+- **Main drawback:** low pair count; stretched-metal shelf lets dirt fall through; the fiberboard seat has no arms and is not a mobility aid
 - **Who should skip it:** households that need more than a few everyday pairs at the door, or guests who need arms, a higher seat, or a transfer surface prescribed by a clinician
 - **Accessibility:** a seat can help some people remove shoes; it is not medical equipment and the 220.5 lb rating is a manufacturer test, not a clinical clearance
 - **Small-space:** same ~14" depth as the cabinet; useful when one piece has to be both seat and storage
@@ -206,6 +208,7 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 
 **Not established**
 
+- That the fiberboard seat is thin
 - Comfort for every guest
 - Safety for balance or orthotic needs
 - Ownership or household testing
@@ -238,7 +241,7 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 - No Product, Review, AggregateRating, or Offer schema is used.
 - No `AffiliateDisclosure` is mounted on the cluster.
 - `/disclosure` still states that no affiliate program is in use.
-- Image provenance: the revised pillar keeps the existing repository cover `public/images/posts/shoe-free-entryway.png`. The three new articles have no cover images so they do not reuse that photo or introduce merchant imagery.
+- Image provenance: the revised pillar and the three supporting articles share the existing repository cover `public/images/posts/shoe-free-entryway.png` as a topical entryway scene, matching `docs/image-credits.md`. It is not a merchant or product photo and is not presented as household testing.
 
 ## Article mapping
 
@@ -264,5 +267,7 @@ Independent read-only reviews were run against the final source and exported HTM
 **Visual QA:** Confirmed the GFM pipe table never became a `<table>` (Contentlayer has no `remark-gfm`). Replaced with a stacked comparison so it is readable at 390px. Product links now use block display and paragraph spacing. Olive meta contrast is a pre-existing token issue, not unique to this cluster.
 
 **Release auditor:** Ready-with-warnings on the first commit (no live screenshots). Technical and trust checks passed: static export, sitemap, no affiliate claims, no client registry import.
+
+**Follow-up wording pass:** BAGGMUCK movement is no longer attributed to the manufacturer. Copy now says the official page does not identify the tray as a standing or nonslip surface. “Thin” was removed from NIPÅSEN seat descriptions. Image provenance now matches the shared `shoe-free-entryway.png` covers.
 
 **Live product URLs (rechecked 2026-08-15):** all five approved destinations returned HTTP 200.
