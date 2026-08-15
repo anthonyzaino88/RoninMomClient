@@ -10,7 +10,7 @@ import {
   getPostModifiedDate,
   getRelatedPosts,
 } from '@/lib/content'
-import { brandImages, coverAlt, hasCoverImage } from '@/lib/images'
+import { brandImages, coverAlt, coverNote, hasCoverImage } from '@/lib/images'
 import styles from './post.module.css'
 
 export async function generateStaticParams() {
@@ -137,16 +137,23 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           </header>
 
           {showCover && (
-            <div className={styles.imageWrapper}>
-              <Image
-                src={post.image!}
-                alt={coverAlt(post.slug, post.title)}
-                fill
-                className={styles.featuredImage}
-                sizes="(max-width: 768px) 100vw, 760px"
-                priority
-              />
-            </div>
+            <figure className={styles.cover}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={post.image!}
+                  alt={coverAlt(post.slug, post.title)}
+                  fill
+                  className={styles.featuredImage}
+                  sizes="(max-width: 768px) 100vw, 760px"
+                  priority
+                />
+              </div>
+              {coverNote(post.slug) ? (
+                <figcaption className={styles.coverNote}>
+                  {coverNote(post.slug)}
+                </figcaption>
+              ) : null}
+            </figure>
           )}
 
           <div className={styles.content}>

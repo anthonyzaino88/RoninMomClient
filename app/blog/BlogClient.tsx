@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { coverAlt } from '@/lib/images'
 import styles from './blog.module.css'
 
 interface Post {
@@ -24,21 +25,6 @@ interface BlogClientProps {
   featuredId?: string
 }
 
-const POST_IMAGE_ALT: Record<string, string> = {
-  'shoe-free-home-with-kids':
-    'A tidy shoe-free entryway with a bench, shoe racks, hanging bags, and a plant.',
-  'low-tox-starter-kit':
-    'A small set of household cleaning tools and refillable containers on a kitchen surface.',
-  'organic-cotton-dish-cloths':
-    'Folded reusable cloth towels stacked for everyday kitchen use.',
-  'self-sufficient-living':
-    'A parent and child tending vegetables together in a garden.',
-  'holistic-wellness':
-    'A family walking together through a sunlit park.',
-  'glass-bottles-sustainable-living':
-    'Assorted glass food-storage jars arranged on a kitchen shelf.',
-}
-
 function formatDate(date: string) {
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -52,7 +38,7 @@ function hasCover(image?: string) {
 }
 
 function altFor(post: Post) {
-  return POST_IMAGE_ALT[post.slug] || post.title
+  return coverAlt(post.slug, post.title)
 }
 
 export default function BlogClient({
