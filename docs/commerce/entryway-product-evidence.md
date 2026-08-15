@@ -241,7 +241,7 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 - No Product, Review, AggregateRating, or Offer schema is used.
 - No `AffiliateDisclosure` is mounted on the cluster.
 - `/disclosure` still states that no affiliate program is in use.
-- Image provenance: the revised pillar and the three supporting articles share the existing repository cover `public/images/posts/shoe-free-entryway.png` as a topical entryway scene, matching `docs/image-credits.md`. It is not a merchant or product photo and is not presented as household testing.
+- Image provenance: each cluster article now has its own topical still life, recorded in `docs/image-credits.md`. The pillar keeps the existing landing-zone cover. The three supporting covers are original generated still lifes matched to storage, mats/trays, and guest seating. None is a merchant or product photo, and none is presented as household testing.
 
 ## Article mapping
 
@@ -262,12 +262,14 @@ Independent read-only reviews were run against the final source and exported HTM
 
 **SEO auditor:** Intents, titles, H1s, and descriptions are distinct. Confirmed defect was the stale “Ronin Rule” anchor (fixed). Optional cannibalization notes remain: two `shoe-free-home-*` slugs; date-based “Keep reading.”
 
-**Brand reviewer:** Copy scored 4–5. Visual cohesion was the weak category (coverless spokes falling back to the kitchen hero). Spokes now share the existing topical entryway scene with unique alts. Homepage pillar 01 keeps family-life framing.
+**Brand reviewer:** Copy scored 4–5. Visual cohesion was the weak category (coverless spokes falling back to the kitchen hero, then one shared entryway scene). Spokes now have distinct topical still lifes. Homepage pillar 01 keeps family-life framing.
 
 **Visual QA:** Confirmed the GFM pipe table never became a `<table>` (Contentlayer has no `remark-gfm`). Replaced with a stacked comparison so it is readable at 390px. Product links now use block display and paragraph spacing. Olive meta contrast is a pre-existing token issue, not unique to this cluster.
 
 **Release auditor:** Ready-with-warnings on the first commit (no live screenshots). Technical and trust checks passed: static export, sitemap, no affiliate claims, no client registry import.
 
-**Follow-up wording pass:** BAGGMUCK movement is no longer attributed to the manufacturer. Copy now says the official page does not identify the tray as a standing or nonslip surface. “Thin” was removed from NIPÅSEN seat descriptions. Image provenance now matches the shared `shoe-free-entryway.png` covers.
+**Follow-up wording pass:** BAGGMUCK movement is no longer attributed to the manufacturer. Copy now says the official page does not identify the tray as a standing or nonslip surface. “Thin” was removed from NIPÅSEN seat descriptions.
+
+**Cover pass:** The three supporting articles no longer reuse the pillar cover. Each has a distinct still life matched to storage, containment, or guest seating.
 
 **Live product URLs (rechecked 2026-08-15):** all five approved destinations returned HTTP 200.

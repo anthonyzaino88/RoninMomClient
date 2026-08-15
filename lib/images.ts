@@ -19,11 +19,11 @@ export const postImageAlt: Record<string, string> = {
   'shoe-free-home-with-kids':
     'A light-wood entryway bench with an upholstered seat, two open shoe shelves, a woven floor mat, a wall hook with a tote, and a potted plant.',
   'small-entryway-shoe-storage':
-    'Open shelves under a light-wood entryway bench holding adult sneakers, flats, and a child-sized pair.',
+    'A narrow hallway with an open metal shoe rack of everyday pairs, a woven basket of shoes, and a closed cabinet farther down the hall.',
   'entryway-mat-boot-tray-system':
-    'A woven rectangular mat on a light wood floor in front of an entryway bench.',
+    'A raised-edge boot tray holding muddy rain boots and wet sneakers beside an interior mat, with an outdoor scraper visible through an open door.',
   'shoe-free-home-guests-accessibility':
-    'An entryway bench with a seat and open shoe shelves, and a wall hook holding a canvas tote.',
+    'A hallway bench with a firm seat, an open shoe shelf, a basket of clean socks, house slippers, and a long-handled shoe horn on a wall hook.',
   'low-tox-starter-kit':
     'A small set of household cleaning tools and refillable containers on a kitchen surface.',
   'organic-cotton-dish-cloths':
