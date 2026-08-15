@@ -71,8 +71,8 @@ export type ProductRecommendation = {
  * Client Components must not import it — the full registry, including draft,
  * retired, and `note` fields, would then ship in the browser bundle.
  *
- * The first cluster uses researched, non-affiliate entryway products only.
- * Held and rejected candidates stay in docs/commerce/entryway-product-evidence.md.
+ * Public records are researched, non-affiliate editorial examples.
+ * Held and rejected candidates stay in docs/commerce/*-product-evidence.md.
  */
 export const products: readonly ProductRecommendation[] = [
   {
@@ -143,6 +143,87 @@ export const products: readonly ProductRecommendation[] = [
       'shoe-free-home-guests-accessibility',
     ],
     note: 'Official IKEA US page, article 205.861.42, checked 2026-08-15. Bench plus open shelf; about 4 pairs on the shelf; tested to 220.5 lb; pairs with the 28x14 BAGGMUCK tray. Not a medical seating product. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-mulig-drying-rack',
+    name: 'MULIG drying rack, indoor/outdoor, white',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/mulig-drying-rack-indoor-outdoor-white-50228755/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: ['indoor-clothes-drying-rack-small-space'],
+    note: 'Official IKEA US page, article 502.287.55, checked 2026-08-15. Fold-out wings; 20-yard drying capacity; 68 x 22 1/2 x 40 1/2 in open; four hooks. Indoor/outdoor. Wipe-clean. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-jall-drying-rack',
+    name: 'JÄLL drying rack, indoor/outdoor, white',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/jaell-drying-rack-indoor-outdoor-white-80242892/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'small-space-laundry-system',
+      'indoor-clothes-drying-rack-small-space',
+    ],
+    note: 'Official IKEA US page, article 802.428.92, checked 2026-08-15. Compact folding rack; 6-yard drying capacity; 31 x 15 3/4 x 32 1/4 in. Indoor/outdoor. Wipe-clean. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-pressa-hanging-dryer',
+    name: 'PRESSA hanging dryer with 16 clothes clips, green',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/pressa-hanging-dryer-with-16-clothes-clips-green-90579157/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: ['indoor-clothes-drying-rack-small-space'],
+    note: 'Official IKEA US page, article 905.791.57, checked 2026-08-15. Hanging dryer with 16 clips; 15 3/4 in diameter, 10 1/4 in height; indoor/outdoor; folds. For small items. Not a full-load rack. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-torkis-laundry-basket-9',
+    name: 'TORKIS flexible laundry basket, in/outdoor, yellow, 9 gallon',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/torkis-flexible-laundry-basket-in-outdoor-yellow-50579164/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'small-space-laundry-system',
+      'family-laundry-hamper-system',
+    ],
+    note: 'Official IKEA US page, article 505.791.64, checked 2026-08-15. Polyethylene flexible basket; 9 gallon; 24 1/2 in long, 10 3/4 in high; two handles; indoor/outdoor. Wipe with a dry cloth. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-slibb-laundry-basket-6',
+    name: 'SLIBB flexible laundry basket, green, 6 gallon',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/slibb-flexible-laundry-basket-green-20567723/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: [
+      'family-laundry-hamper-system',
+      'laundry-folding-put-away-small-space',
+    ],
+    note: 'Official IKEA US page, article 205.677.23, checked 2026-08-15. Polyethylene mesh basket; 6 gallon; 15 x 11 3/8 x 14 1/8 in; max load 9 lb. Store cool and dry, away from direct sunlight. Manufacturer mesh/air-circulate note is not treated as a mildew guarantee. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-purrpingla-bag-stand-11',
+    name: 'PURRPINGLA laundry bag with stand, beige, 11 gallon',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/purrpingla-laundry-bag-with-stand-beige-40609406/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-15',
+    relatedSlugs: ['family-laundry-hamper-system'],
+    note: 'Official IKEA US page, article 406.094.06, checked 2026-08-15. Narrow standing bag on a metal frame; 8 x 17 1/4 x 22 1/2 in; 11 gallon; two compartments; max load 282 oz. Bag is polyester (min. 90% recycled); frame is powder-coated steel. Hand wash the bag; do not tumble dry. Not household-tested. No affiliate parameters.',
   },
 ]
 

@@ -1,8 +1,11 @@
 # Content-commerce foundation
 
 Static-export compatible product recommendations. No affiliate products
-are registered. The first public records are researched, non-affiliate
-entryway examples documented in `docs/commerce/entryway-product-evidence.md`.
+are registered. Public records are researched, non-affiliate editorial
+examples. Evidence lives in:
+
+- `docs/commerce/entryway-product-evidence.md` (shoe-free landing zone)
+- `docs/commerce/laundry-product-evidence.md` (small-space laundry)
 
 ## Product model
 

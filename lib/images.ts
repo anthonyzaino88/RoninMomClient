@@ -34,6 +34,14 @@ export const postImageAlt: Record<string, string> = {
     'A family walking together through a sunlit park.',
   'glass-bottles-sustainable-living':
     'Assorted glass food-storage jars arranged on a kitchen shelf.',
+  'small-space-laundry-system':
+    'A yellow flexible laundry tote of clothes on a wood floor beside a compact white folding drying rack with two cloths, and a wooden stool stacked with folded towels.',
+  'indoor-clothes-drying-rack-small-space':
+    'A white folding drying rack holding a green shirt, rust socks, and a small sweater, with a hanging clip dryer on the wall and a compact floor fan.',
+  'family-laundry-hamper-system':
+    'A closet corner with a green mesh laundry basket, a yellow flexible tote, and a narrow two-compartment standing laundry bag on a metal frame.',
+  'laundry-folding-put-away-small-space':
+    'A wood table with a stack of folded knits and a pair of small socks, a chair, a wicker basket of unfolded clothes, and a shirt hanging on a door.',
 }
 
 /** Quiet public note for still lifes that should not read as household photography. */
@@ -45,6 +53,13 @@ export const postImageNote: Record<string, string> = {
   'entryway-mat-boot-tray-system':
     'Editorial still life — not a household test.',
   'shoe-free-home-guests-accessibility':
+    'Editorial still life — not a household test.',
+  'small-space-laundry-system': 'Editorial still life — not a household test.',
+  'indoor-clothes-drying-rack-small-space':
+    'Editorial still life — not a household test.',
+  'family-laundry-hamper-system':
+    'Editorial still life — not a household test.',
+  'laundry-folding-put-away-small-space':
     'Editorial still life — not a household test.',
 }
 
