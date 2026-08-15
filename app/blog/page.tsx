@@ -1,4 +1,5 @@
 import { getPublishedPosts, isFeatureable } from '@/lib/content'
+import { coverAlt } from '@/lib/images'
 import BlogClient from './BlogClient'
 import styles from './blog.module.css'
 
@@ -18,7 +19,10 @@ export const metadata = {
     images: [
       {
         url: '/images/posts/shoe-free-entryway.png',
-        alt: 'A tidy shoe-free entryway with a bench, shoe racks, hanging bags, and a plant.',
+        alt: coverAlt(
+          'shoe-free-home-with-kids',
+          'A Shoe-Free Entryway With Kids: A Simple Landing-Zone System'
+        ),
       },
     ],
   },

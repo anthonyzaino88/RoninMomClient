@@ -57,12 +57,22 @@
   color: var(--muted);
 }
 
+.cover {
+  margin: 0 0 var(--space-lg);
+}
+
 .imageWrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  margin: 0 0 var(--space-lg);
   overflow: hidden;
+}
+
+.coverNote {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
 }
 
 .featuredImage {

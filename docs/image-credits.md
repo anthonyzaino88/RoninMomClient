@@ -28,5 +28,7 @@ Internal record for editorial transparency. Attribution is optional under the no
 ## Usage rules
 
 - Stock family images are topical article imagery only. Do not present them as the author’s family.
+- Generated still lifes are topical editorial images only. Do not present them as household photography or product tests.
+- Cluster still-life covers carry a short public note: “Editorial still life — not a household test.”
 - Brand assets never come from MDX frontmatter.
 - Do not reuse an article cover on an unrelated post.

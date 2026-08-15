@@ -270,6 +270,6 @@ Independent read-only reviews were run against the final source and exported HTM
 
 **Follow-up wording pass:** BAGGMUCK movement is no longer attributed to the manufacturer. Copy now says the official page does not identify the tray as a standing or nonslip surface. “Thin” was removed from NIPÅSEN seat descriptions.
 
-**Cover pass:** The three supporting articles no longer reuse the pillar cover. Each has a distinct still life matched to storage, containment, or guest seating.
+**Cover pass:** The three supporting articles no longer reuse the pillar cover. Each has a distinct still life matched to storage, containment, or guest seating. The guest and storage covers were revised toward a closer, less catalog register. Cluster article pages carry a short public still-life note.
 
 **Live product URLs (rechecked 2026-08-15):** all five approved destinations returned HTTP 200.

@@ -19,11 +19,11 @@ export const postImageAlt: Record<string, string> = {
   'shoe-free-home-with-kids':
     'A light-wood entryway bench with an upholstered seat, two open shoe shelves, a woven floor mat, a wall hook with a tote, and a potted plant.',
   'small-entryway-shoe-storage':
-    'A narrow hallway with an open metal shoe rack of everyday pairs, a woven basket of shoes, and a closed cabinet farther down the hall.',
+    'A tight hallway with an open metal shoe rack of everyday pairs, a child-sized pair on the lowest shelf, a woven basket of shoes, and a closed cabinet in the same frame.',
   'entryway-mat-boot-tray-system':
     'A raised-edge boot tray holding muddy rain boots and wet sneakers beside an interior mat, with an outdoor scraper visible through an open door.',
   'shoe-free-home-guests-accessibility':
-    'A hallway bench with a firm seat, an open shoe shelf, a basket of clean socks, house slippers, and a long-handled shoe horn on a wall hook.',
+    'A firm empty hallway bench with a mostly open shoe shelf, an empty floor tray, a stool holding clean socks and slippers, and a long-handled shoe horn on a wall hook.',
   'low-tox-starter-kit':
     'A small set of household cleaning tools and refillable containers on a kitchen surface.',
   'organic-cotton-dish-cloths':
@@ -36,10 +36,26 @@ export const postImageAlt: Record<string, string> = {
     'Assorted glass food-storage jars arranged on a kitchen shelf.',
 }
 
+/** Quiet public note for still lifes that should not read as household photography. */
+export const postImageNote: Record<string, string> = {
+  'shoe-free-home-with-kids':
+    'Editorial still life — not a household test.',
+  'small-entryway-shoe-storage':
+    'Editorial still life — not a household test.',
+  'entryway-mat-boot-tray-system':
+    'Editorial still life — not a household test.',
+  'shoe-free-home-guests-accessibility':
+    'Editorial still life — not a household test.',
+}
+
 export function hasCoverImage(image?: string | null): boolean {
   return Boolean(image && image.trim().length > 0)
 }
 
 export function coverAlt(slug: string, title: string): string {
   return postImageAlt[slug] || title
+}
+
+export function coverNote(slug: string): string | undefined {
+  return postImageNote[slug]
 }
