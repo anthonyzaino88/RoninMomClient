@@ -64,13 +64,41 @@ export type ProductRecommendation = {
   note?: string
 }
 
-/** Public catalog. Empty until real, reviewed products exist. */
+/**
+ * Public catalog. Empty until real, reviewed products exist.
+ *
+ * Import this module only from Server Components or other build-time code.
+ * Client Components must not import it — the full registry, including draft,
+ * retired, and `note` fields, would then ship in the browser bundle.
+ */
 export const products: readonly ProductRecommendation[] = []
+
+/** Approved fields allowed to cross the server/client boundary. */
+export type PublicProductLink = Pick<
+  ProductRecommendation,
+  'id' | 'name' | 'merchant' | 'url' | 'isAffiliate' | 'evidence'
+>
 
 export function getApprovedProduct(
   id: string
 ): ProductRecommendation | undefined {
   return products.find((product) => product.id === id && product.status === 'approved')
+}
+
+export function getApprovedPublicProduct(
+  id: string
+): PublicProductLink | undefined {
+  const product = getApprovedProduct(id)
+  if (!product) return undefined
+
+  return {
+    id: product.id,
+    name: product.name,
+    merchant: product.merchant,
+    url: product.url,
+    isAffiliate: product.isAffiliate,
+    evidence: product.evidence,
+  }
 }
 
 export function isApprovedProduct(

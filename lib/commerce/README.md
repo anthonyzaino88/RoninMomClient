@@ -11,6 +11,30 @@ stable product ID rather than embedding merchant URLs.
 Rendering (`ProductLink`) only outputs products with `status: "approved"`.
 Draft and retired records stay in the registry but render nothing.
 
+## Server / client boundary
+
+Registry lookup happens during static generation in the server-facing
+`ProductLink` component. That component is not a Client Component.
+
+The browser receives only approved public link data:
+
+- product ID, name, merchant, destination URL
+- affiliate flag
+- resolved evidence label
+- precomputed `rel`
+- placement and new-tab behavior
+
+Draft records, retired records, `status`, `relatedSlugs`, `lastChecked`,
+`note`, and the complete registry must stay out of Client Component props
+and out of the client bundle.
+
+`TrackedProductAnchor` is the click-tracking client layer. It must not
+import `lib/commerce/products.ts`. Future Contentlayer MDX integration
+must register `ProductLink`, not `TrackedProductAnchor`.
+
+`lib/commerce/link-attrs.ts` may be imported by either layer. Its import
+from `products.ts` is type-only and does not load the registry.
+
 ## Evidence levels
 
 | Level | Meaning | Public copy may say |

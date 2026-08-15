@@ -1,4 +1,4 @@
-import type { ProductEvidenceLevel } from './products'
+import type { ProductEvidenceLevel } from './products' // type-only: does not load the registry
 
 /**
  * Link relationship helpers for product recommendations.
