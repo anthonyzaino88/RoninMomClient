@@ -17,7 +17,13 @@ export const brandImages = {
 /** Descriptive alts for local article covers, keyed by slug. */
 export const postImageAlt: Record<string, string> = {
   'shoe-free-home-with-kids':
-    'A tidy shoe-free entryway with a bench, shoe racks, hanging bags, and a plant.',
+    'A light-wood entryway bench with an upholstered seat, two open shoe shelves, a woven floor mat, a wall hook with a tote, and a potted plant.',
+  'small-entryway-shoe-storage':
+    'Open shelves under a light-wood entryway bench holding adult sneakers, flats, and a child-sized pair.',
+  'entryway-mat-boot-tray-system':
+    'A woven rectangular mat on a light wood floor in front of an entryway bench.',
+  'shoe-free-home-guests-accessibility':
+    'An entryway bench with a seat and open shoe shelves, and a wall hook holding a canvas tote.',
   'low-tox-starter-kit':
     'A small set of household cleaning tools and refillable containers on a kitchen surface.',
   'organic-cotton-dish-cloths':

@@ -14,7 +14,7 @@ const pillars = [
   {
     name: 'Intentional Family Life',
     summary:
-      'Household rhythms and family rules that make shared spaces workable—starting with a shoe-free entry that holds up with kids.',
+      'Household rhythms that make shared spaces workable—starting with a shoe-free landing zone that holds up with kids.',
     href: '/blog/shoe-free-home-with-kids',
   },
   {

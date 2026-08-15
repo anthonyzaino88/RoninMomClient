@@ -20,8 +20,9 @@ type ProductLinkProps = {
  * and returns nothing for missing, draft, or retired IDs. Only approved
  * public fields are passed to the client anchor.
  *
- * Use this component from pages and the future Contentlayer MDX map.
- * Do not import TrackedProductAnchor from article code.
+ * Use this component from pages and the Contentlayer MDX map
+ * (`components/mdx-components.tsx`). Do not import TrackedProductAnchor
+ * from article code.
  */
 export default function ProductLink({
   productId,

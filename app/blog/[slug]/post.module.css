@@ -113,6 +113,27 @@
   margin: 1.5rem 0;
 }
 
+.content :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+
+.content :global(th),
+.content :global(td) {
+  border: 1px solid var(--rule);
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.content :global(th) {
+  font-weight: 650;
+  background: var(--paper);
+}
+
 .related {
   margin-top: var(--space-xl);
   padding-top: var(--space-md);

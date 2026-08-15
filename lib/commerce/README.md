@@ -1,7 +1,8 @@
 # Content-commerce foundation
 
-Static-export compatible product recommendations. No live affiliate products
-are registered yet.
+Static-export compatible product recommendations. No affiliate products
+are registered. The first public records are researched, non-affiliate
+entryway examples documented in `docs/commerce/entryway-product-evidence.md`.
 
 ## Product model
 
@@ -29,8 +30,9 @@ Draft records, retired records, `status`, `relatedSlugs`, `lastChecked`,
 and out of the client bundle.
 
 `TrackedProductAnchor` is the click-tracking client layer. It must not
-import `lib/commerce/products.ts`. Future Contentlayer MDX integration
-must register `ProductLink`, not `TrackedProductAnchor`.
+import `lib/commerce/products.ts`. Contentlayer MDX registers
+`ProductLink` through `components/mdx-components.tsx`, not
+`TrackedProductAnchor`.
 
 `lib/commerce/link-attrs.ts` may be imported by either layer. Its import
 from `products.ts` is type-only and does not load the registry.

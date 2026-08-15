@@ -13,7 +13,7 @@ Internal record for editorial transparency. Attribution is optional under the no
 
 | File / URL | Article slug | Photographer / source | License notes |
 | --- | --- | --- | --- |
-| `public/images/posts/shoe-free-entryway.png` | `shoe-free-home-with-kids` | Existing Ronin Mom site asset | Site photography already in repo |
+| `public/images/posts/shoe-free-entryway.png` | `shoe-free-home-with-kids`, `small-entryway-shoe-storage`, `entryway-mat-boot-tray-system`, `shoe-free-home-guests-accessibility` | Existing Ronin Mom site asset | Shared topical entryway scene for the cluster; not a merchant or product photo and not presented as household testing |
 | `public/images/posts/low-tox-starter-kit.png` | `low-tox-starter-kit` | Existing Ronin Mom site asset | Site photography already in repo; not for About or brand identity |
 | `public/images/posts/organic-cotton-dish-cloths.webp` | `organic-cotton-dish-cloths` | Existing Ronin Mom site asset | Product/cloth photo already in repo |
 | `public/images/posts/self-sufficient-family-gardening.jpg` | `self-sufficient-living` | Pexels photo [4894603](https://www.pexels.com/photo/father-and-daughter-gardening-4894603/) | [Pexels license](https://www.pexels.com/license/) |
