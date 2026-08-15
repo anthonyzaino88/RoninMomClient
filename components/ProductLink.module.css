@@ -1,9 +1,17 @@
 .link {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1.1rem;
   color: var(--forest);
   font-weight: 650;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
   overflow-wrap: anywhere;
+}
+
+.link :global(p) {
+  display: inline;
+  margin: 0;
 }
 
 .link:hover,

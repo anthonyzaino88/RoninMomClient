@@ -251,4 +251,18 @@ No affiliate application, approval, commission, tracking relationship, or mercha
 
 ## Review findings
 
-Filled in after independent read-only review of the final files and exported HTML.
+Independent read-only reviews were run against the final source and exported HTML.
+
+**Blog editor:** First pass was Revise (pillar science before setup; cloned product copy). After revision, the pillar leads with the five-job system, product writeups stay on the mat guide, and guest/small-space sections point out instead of restating.
+
+**Content reviewer:** Required stale inbound title on `low-tox-starter-kit` and a guest → mat/tray link. Both fixed. ProductLink remains a Server Component; disinfectant and other hold articles were not monetized.
+
+**SEO auditor:** Intents, titles, H1s, and descriptions are distinct. Confirmed defect was the stale “Ronin Rule” anchor (fixed). Optional cannibalization notes remain: two `shoe-free-home-*` slugs; date-based “Keep reading.”
+
+**Brand reviewer:** Copy scored 4–5. Visual cohesion was the weak category (coverless spokes falling back to the kitchen hero). Spokes now share the existing topical entryway scene with unique alts. Homepage pillar 01 keeps family-life framing.
+
+**Visual QA:** Confirmed the GFM pipe table never became a `<table>` (Contentlayer has no `remark-gfm`). Replaced with a stacked comparison so it is readable at 390px. Product links now use block display and paragraph spacing. Olive meta contrast is a pre-existing token issue, not unique to this cluster.
+
+**Release auditor:** Ready-with-warnings on the first commit (no live screenshots). Technical and trust checks passed: static export, sitemap, no affiliate claims, no client registry import.
+
+**Live product URLs (rechecked 2026-08-15):** all five approved destinations returned HTTP 200.

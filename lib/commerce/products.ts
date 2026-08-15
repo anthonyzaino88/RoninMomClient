@@ -102,7 +102,6 @@ export const products: readonly ProductRecommendation[] = [
     relatedSlugs: [
       'shoe-free-home-with-kids',
       'entryway-mat-boot-tray-system',
-      'small-entryway-shoe-storage',
     ],
     note: 'Official IKEA US page, article 603.297.11, checked 2026-08-15. Polypropylene tray with a raised edge; wipe-clean. Manufacturer notes it can slide. Not household-tested. No affiliate parameters.',
   },
@@ -115,7 +114,7 @@ export const products: readonly ProductRecommendation[] = [
     evidence: 'researched',
     status: 'approved',
     lastChecked: '2026-08-15',
-    relatedSlugs: ['small-entryway-shoe-storage', 'shoe-free-home-with-kids'],
+    relatedSlugs: ['small-entryway-shoe-storage'],
     note: 'Official IKEA US page, article 505.309.93, checked 2026-08-15. Open steel rack; holds about 6 pairs; indoor only; stackable if both units are wall-anchored. Not household-tested. No affiliate parameters.',
   },
   {
@@ -142,7 +141,6 @@ export const products: readonly ProductRecommendation[] = [
     relatedSlugs: [
       'small-entryway-shoe-storage',
       'shoe-free-home-guests-accessibility',
-      'shoe-free-home-with-kids',
     ],
     note: 'Official IKEA US page, article 205.861.42, checked 2026-08-15. Bench plus open shelf; about 4 pairs on the shelf; tested to 220.5 lb; pairs with the 28x14 BAGGMUCK tray. Not a medical seating product. Not household-tested. No affiliate parameters.',
   },
