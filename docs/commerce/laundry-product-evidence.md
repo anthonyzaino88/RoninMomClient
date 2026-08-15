@@ -213,11 +213,11 @@ Four original generated still lifes, one per article, stored as JPEG under `publ
 | File | SHA-256 prefix |
 | --- | --- |
 | `small-space-laundry-system.jpg` | `e4d85605aade` |
-| `indoor-clothes-drying-rack.jpg` | `efac2fa149b0` |
-| `family-laundry-hamper.jpg` | `e286763f29e7` |
-| `laundry-folding-put-away.jpg` | `1ef7fa9d687a` |
+| `indoor-clothes-drying-rack.jpg` | `c0c644bdd311` |
+| `family-laundry-hamper.jpg` | `9bcbd6921a0d` |
+| `laundry-folding-put-away.jpg` | `4ced97c5763d` |
 
-The indoor-drying cover includes a compact floor fan as atmosphere. It is not a registry product and is not recommended in the article.
+Hamper, drying, and folding covers were recast after brand review so they do not read as a three-SKU closet lineup, a floor-fan drying method, or a lifestyle folding set.
 
 ## Article-to-product mapping
 
@@ -237,11 +237,27 @@ The indoor-drying cover includes a compact floor fan as atmosphere. It is not a 
 
 ## Review findings
 
-Recorded after independent passes (see PR). Blocking items from those passes are fixed in source before the draft PR is opened.
+Independent read-only passes were run against source, then blocking items were fixed.
+
+**Product-evidence:** Ready. Specs match official IKEA US pages. Forbidden marketing (energy bills, gentler on clothes/environment, mildew as a guarantee) is not used as fact. EPA / ENERGY STAR claims are sourced on the drying article.
+
+**Trust / disclosure:** Ready. All six laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. Disinfectant article has no product links.
+
+**Blog editor:** Ready. Product-paragraph overlap is not substantial after the pillar was shortened to ProductLink + skip. High-value cuts applied: pillar moisture compressed to the drying guide; PURRPINGLA 282 oz given as about 17½ lb.
+
+**SEO:** Distinct titles, H1s, descriptions, and intents. Confirmed medium defect: category/date “Keep reading” mixed laundry with shoe-free. Fixed with a cluster map in `lib/content.ts` so each cluster prefers its siblings. Optional: SERP title length; homepage inbound (deferred).
+
+**Brand:** Distinctiveness scored 3 on first covers (catalog hamper lineup, lifestyle folding set, drying-cover fan). Those three covers were recast. Copy scored 4–5. Homepage pillars unchanged.
+
+**Accessibility / unsafe implications:** Ready. Walkway trip hazards, carry-weight limits, child stair-carrying, PRESSA hang-point, and mold-as-remediation are handled. No chemical laundry products.
+
+**Visual QA:** Screenshots of the static export at ~390, 768, and 1280. Article-page caption present; journal cards do not carry it. Drying cover keeps both the floor rack and hanging dryer in the 16:10 crop. Folding cover received `object-position: 22% 50%` so the chair and clean-clothes basket stay in the desktop crop. Product links wrap as block “at IKEA · Researched.” No live keyboard walk beyond CSS `:focus-visible` and first-viewport screenshots.
+
+**Release:** Ready-with-warnings after follow-up commit: draft PR, no PR CI, deferred homepage inbound and SERP title length. Nothing merged or deployed.
 
 ## Final URL recheck
 
-2026-08-15: all six approved IKEA URLs and both EPA / ENERGY STAR sources returned HTTP 200.
+2026-08-15 (after the first commit, before the follow-up): all six approved IKEA URLs plus ENERGY STAR and both EPA sources returned HTTP 200.
 
 ## Deferred work
 
@@ -251,4 +267,6 @@ Recorded after independent passes (see PR). Blocking items from those passes are
 - ENHET rolling bin if a laundry-room furniture guide is written later
 - Revising hold articles (`organic-cotton-dish-cloths`, `self-sufficient-living`, etc.)
 - Homepage featuring for this cluster
+- Still-life caption on journal cards (article pages already show it)
+- Filling `HOLD_SLUGS` (pre-existing empty set; not required to ship this cluster)
 - Affiliate program (none exists)

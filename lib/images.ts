@@ -37,11 +37,11 @@ export const postImageAlt: Record<string, string> = {
   'small-space-laundry-system':
     'A yellow flexible laundry tote of clothes on a wood floor beside a compact white folding drying rack with two cloths, and a wooden stool stacked with folded towels.',
   'indoor-clothes-drying-rack-small-space':
-    'A white folding drying rack holding a green shirt, rust socks, and a small sweater, with a hanging clip dryer on the wall and a compact floor fan.',
+    'A white folding drying rack with two shirts near a fogged window, and a green hanging clip dryer holding socks on a wall peg.',
   'family-laundry-hamper-system':
-    'A closet corner with a green mesh laundry basket, a yellow flexible tote, and a narrow two-compartment standing laundry bag on a metal frame.',
+    'A round wicker laundry basket on a wood floor beside a child’s shirt and socks that missed the basket, with a plaid shirt draped over a dresser drawer.',
   'laundry-folding-put-away-small-space':
-    'A wood table with a stack of folded knits and a pair of small socks, a chair, a wicker basket of unfolded clothes, and a shirt hanging on a door.',
+    'A wood table with two stacks of folded clothes, a chair holding an empty cloth basket, and a shirt hanging from a door handle.',
 }
 
 /** Quiet public note for still lifes that should not read as household photography. */
@@ -73,4 +73,13 @@ export function coverAlt(slug: string, title: string): string {
 
 export function coverNote(slug: string): string | undefined {
   return postImageNote[slug]
+}
+
+/** Optional object-position so wide still lifes keep the useful side in a 16:10 crop. */
+export const postImagePosition: Record<string, string> = {
+  'laundry-folding-put-away-small-space': '22% 50%',
+}
+
+export function coverObjectPosition(slug: string): string | undefined {
+  return postImagePosition[slug]
 }

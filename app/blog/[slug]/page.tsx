@@ -10,7 +10,7 @@ import {
   getPostModifiedDate,
   getRelatedPosts,
 } from '@/lib/content'
-import { brandImages, coverAlt, coverNote, hasCoverImage } from '@/lib/images'
+import { brandImages, coverAlt, coverNote, coverObjectPosition, hasCoverImage } from '@/lib/images'
 import styles from './post.module.css'
 
 export async function generateStaticParams() {
@@ -146,6 +146,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   className={styles.featuredImage}
                   sizes="(max-width: 768px) 100vw, 760px"
                   priority
+                  style={
+                    coverObjectPosition(post.slug)
+                      ? { objectPosition: coverObjectPosition(post.slug) }
+                      : undefined
+                  }
                 />
               </div>
               {coverNote(post.slug) ? (
