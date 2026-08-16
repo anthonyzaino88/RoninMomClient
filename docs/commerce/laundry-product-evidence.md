@@ -31,7 +31,7 @@ Three candidates were scored before drafting.
 | Household paper and art-supply organization | High: Intentional Family Life / homeschool | Paper landing, caddy vs drawer, filing | KUGGIS U.S. page exists; DRÖNJÖNS appeared as Canada in research | Medium: organizers are similar once size is chosen | Weak links to current Home cluster | Low | Possible, but compositions risk looking like the same closet | None, but TROFAST sprawls into toy storage | Deferred |
 | Reusable lunch-packing systems | Medium | Lunchbox format, ice packs, packing routine | Mixed: IKEA bento pages exist; several lunch brands route through retailers | Medium, but food-temperature claims need USDA/FDA care | Would sit next to held glass-bottle and silicone-bag articles | Higher: food safety, “keeps food fresh,” child lunch claims | Distinct, but easy to look like product photography | High overlap with `glass-bottles-sustainable-living` and `silicone-bags-zero-waste` | Rejected for this pass |
 
-Laundry won because it has real format decisions, stable official pages, low overlap with the shoe-free cluster, and no need to attach products to hold articles (`diy-disinfectant-spray`, `holistic-wellness`, `low-tox-starter-kit`, `organic-cotton-dish-cloths`, `glass-bottles-sustainable-living`, `silicone-bags-zero-waste`, `self-sufficient-living`).
+Laundry won because it has real format decisions, stable official pages, low overlap with the shoe-free cluster, and no need to attach products to hold articles (`holistic-wellness`, `low-tox-starter-kit`, `organic-cotton-dish-cloths`, `glass-bottles-sustainable-living`, `silicone-bags-zero-waste`, `self-sufficient-living`). The former Castile-soap-and-vinegar article (`diy-disinfectant-spray`) was later retired.
 
 Existing articles were **not** revised. A laundry cluster does not materially correct those hold pieces, and the task asked not to force product links onto weak topics.
 
@@ -323,7 +323,7 @@ Independent read-only passes were run against source, then blocking items were f
 
 **Product-evidence:** Ready after the 2026-08-16 wood/willow pass, with two follow-up fixes: Lehman's upright size labeled as 70 in H × 23 in W × 48 in L (not IKEA L × W × H), and the hamper maintenance line no longer tells readers to hand-wash the TOLKNING/NATTGIBBA machine-wash bags. Specs match official IKEA US and Lehman's pages. Forbidden marketing (energy bills, gentler on clothes/environment, mildew as a guarantee, wood dries better) is not used as fact. EPA / ENERGY STAR claims are sourced on the drying article.
 
-**Trust / disclosure:** Ready. All nine laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. Disinfectant article has no product links.
+**Trust / disclosure:** Ready. All nine laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. The former disinfectant article was later retired.
 
 **Blog editor:** Ready after the wood/willow pass. Blocking measurement mislabel (Lehman's 70 × 23 × 48 read as IKEA floor length) and the blanket hand-wash line were fixed. Folding stayed Ready throughout.
 
