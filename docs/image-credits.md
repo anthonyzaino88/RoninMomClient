@@ -27,7 +27,6 @@ Internal record for editorial transparency. Attribution is optional under the no
 | `public/images/posts/family-wellness-outdoor-rhythm.jpg` | `holistic-wellness` | Pexels photo [5290403](https://www.pexels.com/photo/backview-of-a-family-walking-on-park-5290403/) | [Pexels license](https://www.pexels.com/license/) |
 | `public/images/posts/glass-food-storage-kitchen-shelf.jpg` | `glass-bottles-sustainable-living` | Luisa Brimble via [Unsplash](https://unsplash.com/photos/assorted-glass-jars-on-white-wooden-shelf-i-GPyFK_SJg) | [Unsplash license](https://unsplash.com/license/) |
 | Amazon product image URL | `silicone-bags-zero-waste` | Product listing image (existing) | Kept only because it depicts the reviewed product type |
-| _(none)_ | `diy-disinfectant-spray` | — | Hold article: no new cover until claims are corrected |
 
 ## Usage rules
 

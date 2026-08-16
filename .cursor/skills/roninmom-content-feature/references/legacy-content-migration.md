@@ -24,14 +24,14 @@ Do not delete, unpublish, or redirect an article without user approval. Do not f
 
 ## Known trust blocker
 
-The published article with slug `diy-disinfectant-spray` must be classified **Hold** until rewritten and verified.
+The article with slug `diy-disinfectant-spray` was **retired and removed** from the public journal (user-approved, 2026-08-16). Do not restore it, feature it, or republish the Castile-soap-and-vinegar disinfectant recipe.
 
-The legacy recipe combines Castile soap and vinegar and calls the mixture a disinfectant that kills germs or bacteria. Do not repeat or promote those claims:
+The legacy recipe combined Castile soap and vinegar and called the mixture a disinfectant that kills germs or bacteria. Do not repeat or promote those claims:
 
 - Dr. Bronner's current guidance says to use vinegar as a separate step because acid breaks apart Castile soap and reduces its cleaning ability: <https://www.drbronner.com/pages/castile-soap-hard-water>
 - The EPA explains that disinfectant efficacy claims depend on reviewed product data, labeled organisms, use directions, and contact time: <https://www.epa.gov/pesticide-registration/selected-epa-registered-disinfectants>
 
-Remove internal recommendations that send readers to this article until a corrected version is approved. A responsible rewrite may discuss an all-purpose **cleaner** separately from disinfection, but it must not invent efficacy claims or imply that natural automatically means safe for children, pets, or every surface.
+Do not add internal recommendations to this retired slug. A later cleaning article may discuss an all-purpose **cleaner** separately from disinfection, but it must not invent efficacy claims or imply that natural automatically means safe for children, pets, or every surface.
 
 ## Known legacy URL shape
 

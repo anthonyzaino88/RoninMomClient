@@ -81,6 +81,7 @@ substantive, indexable content.
 
 ## Out of scope until a dedicated review
 
-Do not attach product recommendations to `/blog/diy-disinfectant-spray`,
-health or wellness articles, or cleaning/disinfecting guidance without a
-separate editorial and evidence review.
+Do not attach product recommendations to health or wellness articles, or
+cleaning/disinfecting guidance, without a separate editorial and evidence
+review. The former Castile-soap-and-vinegar article (`diy-disinfectant-spray`)
+was retired and must not be republished as a disinfectant recipe.

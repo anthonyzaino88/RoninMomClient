@@ -23,10 +23,8 @@ PRE-FLIGHT
 5. Inventory published articles and apply the legacy-content migration gate before featuring or materially revising them. Report Keep, Revise, Hold, or Retire recommendations. Do not delete or unpublish content in this pass.
 
 CONTENT SAFETY GATE
-- Treat `diy-disinfectant-spray` as Hold until its exact cleaning and disinfecting claims are corrected and verified.
-- Do not feature or recommend that article from the redesigned homepage, navigation, category modules, or related-content blocks.
-- Report every existing internal link to it and propose a safe replacement or temporary removal.
-- Do not silently rewrite, delete, unpublish, redirect, or change its published date. Include a separate correction recommendation for user approval.
+- The article `diy-disinfectant-spray` was retired and removed. Do not restore it or republish a Castile-soap-and-vinegar disinfectant recipe.
+- Do not invent a replacement cleaning/disinfecting article in this pass.
 
 IMPLEMENTATION GOALS
 - Express Ronin Mom as a modern family field journal: warm, capable, candid, useful, and authored.
