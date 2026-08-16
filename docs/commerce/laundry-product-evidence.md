@@ -47,7 +47,7 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 | `ikea-purrpingla-bag-stand-11` | PURRPINGLA laundry bag with stand, 11 gallon, beige | IKEA | Approved | https://www.ikea.com/us/en/p/purrpingla-laundry-bag-with-stand-beige-40609406/ |
 | `ikea-tolkning-laundry-basket-11` | TOLKNING laundry basket, handmade willow, 11 gallon | IKEA | Approved | https://www.ikea.com/us/en/p/tolkning-laundry-basket-handmade-willow-00512618/ |
 | `ikea-nattgibba-laundry-basket-26` | NATTGIBBA laundry basket, willow/handmade, 26 gallon | IKEA | Approved | https://www.ikea.com/us/en/p/nattgibba-laundry-basket-willow-handmade-30531936/ |
-| `lehmans-premium-wooden-drying-rack-large` | Premium Wooden Clothes Drying Rack, Large | Lehman's | Approved | https://www.lehmans.com/product/premium-floor-clothes-dryers-large/ |
+| `lehmans-premium-wooden-drying-rack-large` | Premium Wooden Clothes Drying Rack, Large | Lehman's | Approved | https://www.lehmans.com/products/premium-wooden-clothes-drying-rack-large |
 | `ikea-klunka-laundry-bag` | KLUNKA laundry bag, 16 gallon | IKEA | Held | https://www.ikea.com/us/en/p/klunka-laundry-bag-white-black-10364373/ |
 | `ikea-purrpingla-bag-26` | PURRPINGLA laundry bag, 26 gallon | IKEA | Held | https://www.ikea.com/us/en/p/purrpingla-laundry-bag-beige-20614239/ |
 | `ikea-enhet-laundry-bin` | ENHET laundry bin with casters, 21 gallon | IKEA | Held | https://www.ikea.com/us/en/p/enhet-laundry-bin-with-casters-white-50613907/ |
@@ -238,12 +238,13 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 ### 9. Lehman's Premium Wooden Clothes Drying Rack, Large
 
 - **Stable ID:** `lehmans-premium-wooden-drying-rack-large`
-- **URL:** https://www.lehmans.com/product/premium-floor-clothes-dryers-large/
+- **URL:** https://www.lehmans.com/products/premium-wooden-clothes-drying-rack-large
+- **Older URL:** https://www.lehmans.com/product/premium-floor-clothes-dryers-large/ (HTTP 301 to the canonical `/products/` path; do not keep the old path as the destination)
 - **Checked:** 2026-08-16, live official U.S. page
 - **SKU:** 68748
 - **Evidence / affiliate:** researched / false
 - **Household task:** Wooden folding floor drying rack
-- **Size listed:** upright 70 × 23 × 48 in; folded 48 × 30 × 6 in; **40 ft** linear drying space; **18 lb**
+- **Size listed:** upright **70 in H × 23 in W × 48 in L** (floor footprint about 48 × 23 in; height 70 in); folded 48 × 30 × 6 in; **40 ft** linear drying space; empty rack **18 lb**
 - **Materials / construction listed:** Amish-made; poplar frame; ¾ in dowels attached with screws
 - **Features listed:** indoor/outdoor; collapsible; ships to a physical address in the lower 48 only (no P.O. box; not Parcel Post)
 - **Main drawback:** 70 × 48 in open footprint; 18 lb to move; folded slab is 48 × 30 × 6 in
@@ -252,7 +253,9 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 - **Small-space:** fold it away; do not leave 70 in of length in the only path
 - **Related slugs:** `small-space-laundry-system`, `indoor-clothes-drying-rack-small-space`
 
-**Permitted:** Amish-made, poplar frame, ¾ in dowels, 40 ft drying space, upright and folded sizes, 18 lb, indoor/outdoor, lower-48 physical-address shipping limit.
+**Permitted:** Amish-made, poplar frame, ¾ in dowels, 40 ft drying space, upright size labeled as H × W × L, folded size, empty-rack weight 18 lb, indoor/outdoor, lower-48 physical-address shipping limit.
+
+Public copy must not present `70 × 23 × 48` as if it used IKEA’s length × width × height order. A walkway skip line should use the **48 × 23 in** floor rectangle and **70 in** height, not “70 by 48 inches of floor.”
 
 **Not established:** household testing; energy-bill savings; that air-drying “extends the life of clothing”; that it is “more solidly built than any other floor-type dryer we've tested”; environmental benefit; price.
 
@@ -318,9 +321,9 @@ Hamper, drying, and folding covers were recast after brand review so they do not
 
 Independent read-only passes were run against source, then blocking items were fixed.
 
-**Product-evidence:** Ready. Specs match official IKEA US pages. Forbidden marketing (energy bills, gentler on clothes/environment, mildew as a guarantee) is not used as fact. EPA / ENERGY STAR claims are sourced on the drying article.
+**Product-evidence:** Ready after the 2026-08-16 wood/willow pass, with two follow-up fixes: Lehman's upright size labeled as 70 in H × 23 in W × 48 in L (not IKEA L × W × H), and the hamper maintenance line no longer tells readers to hand-wash the TOLKNING/NATTGIBBA machine-wash bags. Specs match official IKEA US and Lehman's pages. Forbidden marketing (energy bills, gentler on clothes/environment, mildew as a guarantee, wood dries better) is not used as fact. EPA / ENERGY STAR claims are sourced on the drying article.
 
-**Trust / disclosure:** Ready. All six laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. Disinfectant article has no product links.
+**Trust / disclosure:** Ready. All nine laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. Disinfectant article has no product links.
 
 **Blog editor:** Ready. Product-paragraph overlap is not substantial after the pillar was shortened to ProductLink + skip. High-value cuts applied: pillar moisture compressed to the drying guide; PURRPINGLA 282 oz given as about 17½ lb.
 
@@ -337,6 +340,8 @@ Independent read-only passes were run against source, then blocking items were f
 ## Final URL recheck
 
 2026-08-15 (after the first commit, before the follow-up): all six approved IKEA URLs plus ENERGY STAR and both EPA sources returned HTTP 200.
+
+2026-08-16: all six original IKEA URLs, TOLKNING, and NATTGIBBA returned HTTP 200. Lehman's older `/product/premium-floor-clothes-dryers-large/` returned HTTP 301 to `https://www.lehmans.com/products/premium-wooden-clothes-drying-rack-large` (HTTP 200, same SKU 68748). Registry destination updated to the canonical `/products/` URL.
 
 ## Deferred work
 

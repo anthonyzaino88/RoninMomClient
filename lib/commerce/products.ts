@@ -256,7 +256,7 @@ export const products: readonly ProductRecommendation[] = [
     id: 'lehmans-premium-wooden-drying-rack-large',
     name: 'Premium Wooden Clothes Drying Rack, Large',
     merchant: "Lehman's",
-    url: 'https://www.lehmans.com/product/premium-floor-clothes-dryers-large/',
+    url: 'https://www.lehmans.com/products/premium-wooden-clothes-drying-rack-large',
     isAffiliate: false,
     evidence: 'researched',
     status: 'approved',
@@ -265,7 +265,7 @@ export const products: readonly ProductRecommendation[] = [
       'small-space-laundry-system',
       'indoor-clothes-drying-rack-small-space',
     ],
-    note: "Official Lehman's US page, SKU 68748, checked 2026-08-16. Amish-made; poplar frame with 3/4 in dowels; 40 ft linear drying space; upright 70 x 23 x 48 in; folded 48 x 30 x 6 in; 18 lb. Indoor/outdoor. Ships to a physical address in the lower 48 only. Do not copy energy-bill or durability-test marketing. Not household-tested. No affiliate parameters.",
+    note: "Official Lehman's US page, SKU 68748, checked 2026-08-16. Canonical URL is /products/premium-wooden-clothes-drying-rack-large (older /product/premium-floor-clothes-dryers-large/ 301s there). Amish-made; poplar frame with 3/4 in dowels; 40 ft linear drying space; upright 70 in H x 23 in W x 48 in L; folded 48 x 30 x 6 in; empty rack 18 lb. Indoor/outdoor. Ships to a physical address in the lower 48 only. Do not copy energy-bill or durability-test marketing. Not household-tested. No affiliate parameters.",
   },
 ]
 
