@@ -2,7 +2,7 @@
 
 Editorial research record for Ronin Mom’s second content-commerce cluster. This is not promotional copy and is not a product review.
 
-- **Research date:** 2026-08-15
+- **Research date:** 2026-08-15; wood / willow / thrift follow-up 2026-08-16
 - **Researcher:** Cursor cloud agent working in `anthonyzaino88/RoninMomClient`, starting from merge commit `49789bf2443f6e4522fe6ed137dc46f8d703da66`
 - **Evidence level used for every approved product:** `researched`
 - **Affiliate status for every approved product:** `isAffiliate: false`
@@ -17,6 +17,7 @@ Editorial research record for Ronin Mom’s second content-commerce cluster. Thi
 4. Held or rejected candidates that overlapped an approved format, belonged to a larger furniture system, lacked a stable official U.S. page, or could not be described without inventing details.
 5. Used EPA moisture guidance and ENERGY STAR dryer-prevalence facts only for narrow, sourced claims. Did not copy IKEA energy-savings marketing into public copy.
 6. Rechecked approved URLs on 2026-08-15; all returned HTTP 200.
+7. On 2026-08-16, searched official U.S. manufacturer pages for handmade, wooden, and woven laundry objects that could sit beside the plastic/steel set. Thrift *listings* were not linked (unstable). Editorial thrift checks were allowed. Customer reviews were not used as durability proof or as a reason to reject a live official page.
 
 No affiliate application, approval, commission, tracking relationship, or merchant partnership was found or claimed.
 
@@ -44,6 +45,9 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 | `ikea-torkis-laundry-basket-9` | TORKIS flexible laundry basket, 9 gallon, yellow | IKEA | Approved | https://www.ikea.com/us/en/p/torkis-flexible-laundry-basket-in-outdoor-yellow-50579164/ |
 | `ikea-slibb-laundry-basket-6` | SLIBB flexible laundry basket, 6 gallon, green | IKEA | Approved | https://www.ikea.com/us/en/p/slibb-flexible-laundry-basket-green-20567723/ |
 | `ikea-purrpingla-bag-stand-11` | PURRPINGLA laundry bag with stand, 11 gallon, beige | IKEA | Approved | https://www.ikea.com/us/en/p/purrpingla-laundry-bag-with-stand-beige-40609406/ |
+| `ikea-tolkning-laundry-basket-11` | TOLKNING laundry basket, handmade willow, 11 gallon | IKEA | Approved | https://www.ikea.com/us/en/p/tolkning-laundry-basket-handmade-willow-00512618/ |
+| `ikea-nattgibba-laundry-basket-26` | NATTGIBBA laundry basket, willow/handmade, 26 gallon | IKEA | Approved | https://www.ikea.com/us/en/p/nattgibba-laundry-basket-willow-handmade-30531936/ |
+| `lehmans-premium-wooden-drying-rack-large` | Premium Wooden Clothes Drying Rack, Large | Lehman's | Approved | https://www.lehmans.com/product/premium-floor-clothes-dryers-large/ |
 | `ikea-klunka-laundry-bag` | KLUNKA laundry bag, 16 gallon | IKEA | Held | https://www.ikea.com/us/en/p/klunka-laundry-bag-white-black-10364373/ |
 | `ikea-purrpingla-bag-26` | PURRPINGLA laundry bag, 26 gallon | IKEA | Held | https://www.ikea.com/us/en/p/purrpingla-laundry-bag-beige-20614239/ |
 | `ikea-enhet-laundry-bin` | ENHET laundry bin with casters, 21 gallon | IKEA | Held | https://www.ikea.com/us/en/p/enhet-laundry-bin-with-casters-white-50613907/ |
@@ -187,6 +191,71 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 
 **Not established:** household testing; that it “airs” laundry enough to prevent odor or mildew; price.
 
+### 7. IKEA TOLKNING laundry basket, handmade willow, 11 gallon
+
+- **Stable ID:** `ikea-tolkning-laundry-basket-11`
+- **URL:** https://www.ikea.com/us/en/p/tolkning-laundry-basket-handmade-willow-00512618/
+- **Checked:** 2026-08-16, live official U.S. page
+- **Article number:** 005.126.18
+- **Evidence / affiliate:** researched / false
+- **Household task:** Low handmade willow carry basket with a removable inner bag
+- **Size listed:** 22 × 15 × 11 in; volume 11 gallon; **max. load 13 lb**
+- **Materials:** willow main parts with stain and clear acrylic lacquer; polypropylene feet; bamboo supporting rail; 100% polyester fabric bag (100% recycled)
+- **Care / safety listed:** wipe the basket with a dry cloth; IKEA says you can keep it in a bathroom but **avoid soaking it**; inner bag has a separate machine-wash-warm care line
+- **Features listed:** handmade / one of a kind; removable inner bag; feet described as keeping floor moisture from being absorbed into the basket
+- **Main drawback:** 13 lb max load; low open basket, not a standing sorter; willow is not a plastic tub
+- **Who should skip it:** anyone who regularly carries more than 13 lb, needs a lid, or needs a standing two-compartment hamper
+- **Accessibility:** 11 in high rim; 13 lb is a hard listed limit, not a child-safety rating
+- **Small-space:** 22 × 15 in footprint; measure the landing and doorway
+- **Related slugs:** `small-space-laundry-system`, `family-laundry-hamper-system`
+
+**Permitted:** handmade willow, listed size/volume/load, removable polyester bag, PP feet, bathroom-with-no-soak wording, dry-cloth care.
+
+**Not established:** household testing; that the feet make willow waterproof; heirloom durability; “warm/calm/nature” marketing; price or ratings. Customer-review wobble comments were not used.
+
+### 8. IKEA NATTGIBBA laundry basket, willow/handmade, 26 gallon
+
+- **Stable ID:** `ikea-nattgibba-laundry-basket-26`
+- **URL:** https://www.ikea.com/us/en/p/nattgibba-laundry-basket-willow-handmade-30531936/
+- **Checked:** 2026-08-16, live official U.S. page
+- **Article number:** 305.319.36
+- **Evidence / affiliate:** researched / false
+- **Household task:** Standing handmade willow sorter on a steel frame, two compartments
+- **Size listed:** 23 ½ × 14 ¼ × 24 in; volume 26 gallon; **max. load 33 lb**
+- **Materials:** powder-coated steel frame; willow weave with stain and clear acrylic lacquer; 100% polyester fabric (100% recycled); polypropylene feet
+- **Care listed:** wipe the weave with a dry cloth; inner bag has a separate machine-wash-warm care line
+- **Features listed:** handmade / one of a kind; two compartments for white and colored laundry; removable inner bag; ships flat; assembly required; IKEA copy mentions bathrooms / damp areas
+- **Main drawback:** assembly required; larger standing footprint than PURRPINGLA; willow weave still needs dry-cloth care
+- **Who should skip it:** anyone who cannot assemble the frame, cannot spare 23 ½ × 14 ¼ in, or needs a low carry tote
+- **Accessibility:** 24 in high standing basket; 33 lb is a listed maximum, not a recommendation to fill it that far for every carrier
+- **Small-space:** measure the doorway; this is a standing object, not a flexible tote
+- **Related slugs:** `family-laundry-hamper-system`
+
+**Permitted:** handmade willow on steel frame, listed size/volume/load, two compartments, removable bag, assembly/flat-pack, dry-cloth weave care, IKEA’s bathroom/damp-area mention as catalog wording.
+
+**Not established:** household testing; that damp-area wording means the weave can be soaked; durability or fragility (customer reviews ignored in both directions); “calm/warm/nature” marketing; price or ratings.
+
+### 9. Lehman's Premium Wooden Clothes Drying Rack, Large
+
+- **Stable ID:** `lehmans-premium-wooden-drying-rack-large`
+- **URL:** https://www.lehmans.com/product/premium-floor-clothes-dryers-large/
+- **Checked:** 2026-08-16, live official U.S. page
+- **SKU:** 68748
+- **Evidence / affiliate:** researched / false
+- **Household task:** Wooden folding floor drying rack
+- **Size listed:** upright 70 × 23 × 48 in; folded 48 × 30 × 6 in; **40 ft** linear drying space; **18 lb**
+- **Materials / construction listed:** Amish-made; poplar frame; ¾ in dowels attached with screws
+- **Features listed:** indoor/outdoor; collapsible; ships to a physical address in the lower 48 only (no P.O. box; not Parcel Post)
+- **Main drawback:** 70 × 48 in open footprint; 18 lb to move; folded slab is 48 × 30 × 6 in
+- **Who should skip it:** households that cannot spare the open rectangle, cannot move 18 lb, or need a compact steel rack
+- **Accessibility:** heavier than the compact IKEA steel rack; a loaded rack in a walkway is still a trip hazard
+- **Small-space:** fold it away; do not leave 70 in of length in the only path
+- **Related slugs:** `small-space-laundry-system`, `indoor-clothes-drying-rack-small-space`
+
+**Permitted:** Amish-made, poplar frame, ¾ in dowels, 40 ft drying space, upright and folded sizes, 18 lb, indoor/outdoor, lower-48 physical-address shipping limit.
+
+**Not established:** household testing; energy-bill savings; that air-drying “extends the life of clothing”; that it is “more solidly built than any other floor-type dryer we've tested”; environmental benefit; price.
+
 ## Held candidates
 
 - **KLUNKA 16 gallon:** live U.S. page, stands on its own, moisture-protective interior coating. Held as a duplicative standing-bag format next to PURRPINGLA.
@@ -195,11 +264,21 @@ Existing articles were **not** revised. A laundry cluster does not materially co
 - **TORKIS / PRESSA colorways:** same form as approved SKUs.
 - **SLIBB clips and pins:** accessories, not a collection or drying-format decision.
 - **Brabantia HangOn 25 m:** official U.S. product page exists. Held as a large-rack overlap with MULIG; not needed to make the format comparison.
+- **Lehman's wall-mounted 7-dowel rack** (https://www.lehmans.com/product/wall-mounted-clothes-drying-rack): live U.S. page; closed about 36 × 24 × 2¼ in; 22½ in deep open; 7 lb; screws included. Rechecked 2026-08-16 still showing **only 2 left**. Held for inventory instability. Articles may describe wall-mounted wood as a *format* without a ProductLink.
+- **Lehman's accordion wall dryer** (https://www.lehmans.com/product/accordion-wall-clothes-dryer/): ash, two sizes, mounting hardware not included; page showed low stock during research. Held for the same inventory reason.
+- **IKEA KNIPSA / LUSTIGKURRE:** seagrass KALLAX inserts, not laundry hampers. Held.
+- **IKEA TOLKNING on wheels:** format overlap with the approved low willow carry basket. Held.
+- **IKEA SALUDING bamboo lidded hamper:** live U.S. page (about 15 ¾ in diameter × 25 ¼ in; 13 gal; 13 lb; lid with hole; avoid soaking). Held as a fourth woven SKU; a lid is a poor only home for wet towels. Do not copy “Zen/spa/durable bamboo” marketing.
+- **Basket Lady oval kubu:** official U.S. page was live (about 25 × 19 × 17 in, rattan, liner). Held as a second woven-carry overlap with TOLKNING.
+- **DutchCrafters Amish drying racks:** custom “from $” pricing and thinner published specs / liftgate shipping. Held.
 
 ## Rejected candidates
 
 - Detergent, stain removers, dryer sheets, and “sanitizing” laundry products: chemical-safety / disinfecting context; out of scope with the disinfectant hold.
 - Amazon-only hampers: no Amazon destinations.
+- **Peterboro Rectangle Laundry Basket:** official page was live, but the company announced factory closure in 2022 (emerald ash borer / last production). Unstable current-production recommendation. Rejected.
+- **Lehman's 11-rung dryer** (`/usa-made` URL): returned HTTP 404 during research. Rejected as an unstable URL.
+- Thrift-store or marketplace *listings* (Facebook Marketplace, eBay, Etsy one-offs, local shop SKUs): rejected as destinations. Editorial thrift checks stay in the articles without a store URL.
 
 ## Broader sourced claims used in articles
 
@@ -223,10 +302,10 @@ Hamper, drying, and folding covers were recast after brand review so they do not
 
 | Slug | Intent | Product IDs |
 | --- | --- | --- |
-| `small-space-laundry-system` | Whole-house laundry path | `ikea-torkis-laundry-basket-9`, `ikea-jall-drying-rack` |
-| `indoor-clothes-drying-rack-small-space` | Drying-format decision | `ikea-jall-drying-rack`, `ikea-mulig-drying-rack`, `ikea-pressa-hanging-dryer` |
-| `family-laundry-hamper-system` | Collection-format decision | `ikea-torkis-laundry-basket-9`, `ikea-slibb-laundry-basket-6`, `ikea-purrpingla-bag-stand-11` |
-| `laundry-folding-put-away-small-space` | Fold and put away so clean clothes do not become a second pile | `ikea-slibb-laundry-basket-6` (child-scale clean stack) |
+| `small-space-laundry-system` | Whole-house laundry path | `ikea-torkis-laundry-basket-9`, `ikea-jall-drying-rack`, `ikea-tolkning-laundry-basket-11`, `lehmans-premium-wooden-drying-rack-large` (link + skip; specs in supporting guides) |
+| `indoor-clothes-drying-rack-small-space` | Drying-format decision | `ikea-jall-drying-rack`, `ikea-mulig-drying-rack`, `ikea-pressa-hanging-dryer`, `lehmans-premium-wooden-drying-rack-large` |
+| `family-laundry-hamper-system` | Collection-format decision | `ikea-torkis-laundry-basket-9`, `ikea-slibb-laundry-basket-6`, `ikea-purrpingla-bag-stand-11`, `ikea-tolkning-laundry-basket-11`, `ikea-nattgibba-laundry-basket-26` |
+| `laundry-folding-put-away-small-space` | Fold and put away so clean clothes do not become a second pile | `ikea-slibb-laundry-basket-6` (child-scale clean stack); editorial thrift crate / open basket, no new ProductLink |
 
 ## Affiliate / disclosure confirmation
 
@@ -263,7 +342,9 @@ Independent read-only passes were run against source, then blocking items were f
 
 - Paper/art-supply cluster
 - Lunch-packing cluster (until food-safety sourcing and hold-article overlap are resolved)
-- Brabantia or other non-IKEA drying racks
+- Brabantia or other non-IKEA steel drying racks
+- Lehman's wall-mounted or accordion racks if inventory stabilizes
+- SALUDING, Basket Lady, or other woven SKUs if a later guide needs a lidded or rattan format
 - ENHET rolling bin if a laundry-room furniture guide is written later
 - Revising hold articles (`organic-cotton-dish-cloths`, `self-sufficient-living`, etc.)
 - Homepage featuring for this cluster

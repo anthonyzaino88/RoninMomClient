@@ -5,7 +5,7 @@ are registered. Public records are researched, non-affiliate editorial
 examples. Evidence lives in:
 
 - `docs/commerce/entryway-product-evidence.md` (shoe-free landing zone)
-- `docs/commerce/laundry-product-evidence.md` (small-space laundry)
+- `docs/commerce/laundry-product-evidence.md` (small-space laundry, including handmade willow baskets and a wooden floor rack)
 
 ## Product model
 

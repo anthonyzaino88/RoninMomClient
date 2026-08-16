@@ -225,6 +225,48 @@ export const products: readonly ProductRecommendation[] = [
     relatedSlugs: ['family-laundry-hamper-system'],
     note: 'Official IKEA US page, article 406.094.06, checked 2026-08-15. Narrow standing bag on a metal frame; 8 x 17 1/4 x 22 1/2 in; 11 gallon; two compartments; max load 282 oz. Bag is polyester (min. 90% recycled); frame is powder-coated steel. Hand wash the bag; do not tumble dry. Not household-tested. No affiliate parameters.',
   },
+  {
+    id: 'ikea-tolkning-laundry-basket-11',
+    name: 'TOLKNING laundry basket, handmade willow, 11 gallon',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/tolkning-laundry-basket-handmade-willow-00512618/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-16',
+    relatedSlugs: [
+      'small-space-laundry-system',
+      'family-laundry-hamper-system',
+    ],
+    note: 'Official IKEA US page, article 005.126.18, checked 2026-08-16. Handmade willow; 22 x 15 x 11 in; 11 gallon; max load 13 lb; removable polyester bag; polypropylene feet. Wipe the basket dry; do not soak. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'ikea-nattgibba-laundry-basket-26',
+    name: 'NATTGIBBA laundry basket, willow/handmade, 26 gallon',
+    merchant: 'IKEA',
+    url: 'https://www.ikea.com/us/en/p/nattgibba-laundry-basket-willow-handmade-30531936/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-16',
+    relatedSlugs: ['family-laundry-hamper-system'],
+    note: 'Official IKEA US page, article 305.319.36, checked 2026-08-16. Handmade willow on a powder-coated steel frame; 23 1/2 x 14 1/4 x 24 in; 26 gallon; max load 33 lb; two sort compartments; removable inner bag. Assembly required. Wipe the weave dry. Not household-tested. No affiliate parameters.',
+  },
+  {
+    id: 'lehmans-premium-wooden-drying-rack-large',
+    name: 'Premium Wooden Clothes Drying Rack, Large',
+    merchant: "Lehman's",
+    url: 'https://www.lehmans.com/product/premium-floor-clothes-dryers-large/',
+    isAffiliate: false,
+    evidence: 'researched',
+    status: 'approved',
+    lastChecked: '2026-08-16',
+    relatedSlugs: [
+      'small-space-laundry-system',
+      'indoor-clothes-drying-rack-small-space',
+    ],
+    note: "Official Lehman's US page, SKU 68748, checked 2026-08-16. Amish-made; poplar frame with 3/4 in dowels; 40 ft linear drying space; upright 70 x 23 x 48 in; folded 48 x 30 x 6 in; 18 lb. Indoor/outdoor. Ships to a physical address in the lower 48 only. Do not copy energy-bill or durability-test marketing. Not household-tested. No affiliate parameters.",
+  },
 ]
 
 /** Approved fields allowed to cross the server/client boundary. */
