@@ -325,17 +325,17 @@ Independent read-only passes were run against source, then blocking items were f
 
 **Trust / disclosure:** Ready. All nine laundry rows are `isAffiliate: false`, `evidence: researched`. `/disclosure` unchanged. No `AffiliateDisclosure`. Disinfectant article has no product links.
 
-**Blog editor:** Ready. Product-paragraph overlap is not substantial after the pillar was shortened to ProductLink + skip. High-value cuts applied: pillar moisture compressed to the drying guide; PURRPINGLA 282 oz given as about 17½ lb.
+**Blog editor:** Ready after the wood/willow pass. Blocking measurement mislabel (Lehman's 70 × 23 × 48 read as IKEA floor length) and the blanket hand-wash line were fixed. Folding stayed Ready throughout.
 
-**SEO:** Distinct titles, H1s, descriptions, and intents. Confirmed medium defect: category/date “Keep reading” mixed laundry with shoe-free. Fixed with a cluster map in `lib/content.ts` so each cluster prefers its siblings. Optional: SERP title length; homepage inbound (deferred).
+**SEO:** Distinct titles, H1s, descriptions, and intents. Drying title stays compact / winged / hanging so wood is not merchandised as a fourth format. Keep reading stays inside laundry vs shoe-free. Optional: SERP title length; Keep reading limit of 2 still omits folding on three pages (pre-existing cluster cap); homepage inbound (deferred).
 
-**Brand:** Distinctiveness scored 3 on first covers (catalog hamper lineup, lifestyle folding set, drying-cover fan). Those three covers were recast. Copy scored 4–5. Homepage pillars unchanged.
+**Brand:** Ready after a blocking first pass. Wood/willow were reframed as materials for existing jobs, not a fourth format. Title/cover pair on the drying page matches again (steel still life; no “or Wood?” H1). Scores 4 / 4 / 4 / 4 / 4. Homepage pillars unchanged.
 
-**Accessibility / unsafe implications:** Ready. Walkway trip hazards, carry-weight limits, child stair-carrying, PRESSA hang-point, and mold-as-remediation are handled. No chemical laundry products.
+**Accessibility / unsafe implications:** Ready. Walkway trip hazards, carry-weight limits, child stair-carrying, PRESSA hang-point, NATTGIBBA 33 lb as a manufacturer max (not a child hoist), and mold-as-remediation are handled. No chemical laundry products.
 
-**Visual QA:** Screenshots of the static export at ~390, 768, and 1280. Article-page caption present; journal cards do not carry it. Drying cover keeps both the floor rack and hanging dryer in the 16:10 crop. Folding cover received `object-position: 22% 50%` so the chair and clean-clothes basket stay in the desktop crop. Product links wrap as block “at IKEA · Researched.” No live keyboard walk beyond CSS `:focus-visible` and first-viewport screenshots.
+**Visual QA:** Recaptured 2026-08-16 after the wood/willow revision (Playwright, static export on port 4177) at 390 / 768 / 1280, plus scrolled shots of “Wood, willow, and secondhand,” “A wooden floor rack,” and “Willow and a thrifted basket.” Files: `/tmp/laundry-vqa-wood/` and `/opt/cursor/artifacts/screenshots/`. Caption sits under the 16:10 crop. Product links wrap as block “at IKEA · Researched” / “at Lehman's · Researched” with no overflow. Duplicate merchant in the visible string is a pre-existing ProductLink pattern. No new crop or wrap defects in the added sections. Live keyboard walk was not repeated beyond CSS `:focus-visible`.
 
-**Release:** Ready-with-warnings after follow-up commit: draft PR, no PR CI, deferred homepage inbound and SERP title length. Nothing merged or deployed.
+**Release:** Ready-with-warnings: draft PR, no PR CI, deferred homepage inbound and SERP title length. Nothing merged or deployed.
 
 ## Final URL recheck
 
